@@ -18,9 +18,12 @@ html {
   background-color: #87BDB1 !important;
 }
 
+.navbar {
+  background-color: #68B3AF;
+}
+
 @media(min-width:767px) {
     .navbar {
-      background-color: #68B3AF;
       padding: 20px 0;
       -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
       -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
