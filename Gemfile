@@ -4,14 +4,11 @@ ruby '2.2.2'
 gem 'rails', '~> 4.2.1'
 
 gem 'active_model_serializers'
-gem 'aws-sdk-core', '~> 2.0'
 gem 'bcrypt'
 gem 'pg'
 gem 'unicorn'
 gem 'tilt'
-gem "therubyracer"
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails"
+gem "jquery-rails", "~> 2.3.0"
 
 group :development do
 gem 'guard-rspec'
@@ -31,9 +28,5 @@ end
 group :test do
 gem 'capybara'
 gem 'database_cleaner'
-gem 'faker'
 gem 'launchy'
-gem 'poltergeist'
-gem 'selenium-webdriver'
-gem 'simplecov', require: false
 end
