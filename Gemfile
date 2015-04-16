@@ -8,6 +8,10 @@ gem 'aws-sdk-core', '~> 2.0'
 gem 'bcrypt'
 gem 'pg'
 gem 'unicorn'
+gem 'tilt'
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
 
 group :development do
 gem 'guard-rspec'
