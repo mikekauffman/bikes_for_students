@@ -1,0 +1,15 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "scrollin-nav";
+
+@import url(http://fonts.googleapis.com/css?family=Special+Elite);
+
+.main-container {
+  background-color: #D3E2B6;
+}
+
+.logo {
+  color: #D3E2B6 !important;
+  font-size: 30px;
+  font-family: 'Special Elite', cursive;
+}

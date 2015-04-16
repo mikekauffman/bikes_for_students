@@ -9,6 +9,8 @@ gem 'pg'
 gem 'unicorn'
 gem 'tilt'
 gem "jquery-rails", "~> 2.3.0"
+gem 'bootstrap-sass', '~> 3.3.4'
+gem 'sass-rails', '>= 3.2'
 
 group :development do
 gem 'guard-rspec'
