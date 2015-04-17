@@ -10,6 +10,9 @@
 
 .logo {
   color: #D3E2B6 !important;
-  font-size: 30px;
+  font-size: 2em;
   font-family: 'Special Elite', cursive;
+  @media (max-width: 350px) {
+    font-size: 1.5em;
+  }
 }
