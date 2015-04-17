@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
 body {
     width: 100%;
     height: 100%;
@@ -22,7 +16,7 @@ html {
   background-color: #68B3AF;
 }
 
-@media(min-width:767px) {
+@media (min-width:767px) {
     .navbar {
       padding: 20px 0;
       -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
