@@ -3,6 +3,9 @@
 .slideshow {
   margin-top: 75px;
   height: 400px;
+  @media (max-width: 770px) {
+    display: none;
+  }
 
   .slides {
     // LESS doesn't help with transitions on multiple properties
