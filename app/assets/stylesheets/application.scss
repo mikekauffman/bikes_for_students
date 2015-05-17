@@ -10,9 +10,36 @@
 
 .logo {
   color: #D3E2B6 !important;
-  font-size: 2em;
-  font-family: 'Special Elite', cursive;
+  font-size: 3em;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   @media (max-width: 350px) {
     font-size: 1.5em;
   }
+}
+
+.intro-section {
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background: url('../rehoboth.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.3;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+  }
+}
+
+.welcome-text {
+  width: 14%;
+  margin: 1% 1%;
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 2em;
+  /* color: #68B3AF; */
+  color: black;
 }
