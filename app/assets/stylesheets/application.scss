@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "scrollin-nav";
+@import "slideshow";
 
 @import url(https://fonts.googleapis.com/css?family=Special+Elite);
 
@@ -31,15 +32,30 @@
     background-size: cover;
     opacity: 0.3;
     filter: alpha(opacity=40); /* For IE8 and earlier */
+    @media (max-width: 770px) {
+      background: none;
+    }
   }
 }
 
 .welcome-text {
-  width: 14%;
-  margin: 1% 1%;
+  margin: 1.25% 1%;
   display: inline-block;
   font-weight: bolder;
   font-size: 2em;
-  /* color: #68B3AF; */
-  color: black;
+  color: #F07818;
+  @media (max-width: 770px) {
+    font-size: 1.5em;
+  }
+}
+
+.main-text {
+  font-size: 1.4em;
+  strong {
+    color: #F07818;
+  }
+  a {
+    font-weight: bold;
+    color: #F07818;
+  }
 }

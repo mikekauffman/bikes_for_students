@@ -1,64 +1,92 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll logo" href="#page-top">J-1 Rehoboth</a>
-            </div>
-
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact Us</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#bike-form">Request a Bike</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <section id="intro" class="intro-section">
-      <div class="hero-image"></div>
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-12">
-                <% @welcome_languages.each do |lang| %>
-                  <div class="welcome-text"><%= lang %></div>
-                <% end %>
-              </div>
-          </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand page-scroll logo" href="#page-top">J-1 Rehoboth</a>
       </div>
-    </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Contact Us Section</h1>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li class="hidden">
+            <a class="page-scroll" href="#page-top"></a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#contact">Contact Us</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#bike-form">Request a Bike</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <section id="bike-form" class="bike-form-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Bike Request Form Section</h1>
+  <section id="intro" class="intro-section">
+    <div class="hero-image"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <% @welcome_languages.each do |lang| %>
+            <div class="welcome-text"><%= lang %></div>
+          <% end %>
+          <section class="slideshow">
+            <div class="slides">
+              <% for i in 1..5 do %>
+                <div class="slide">
+                  <img src="Students<%=i%>.jpg"/>
                 </div>
+              <% end %>
             </div>
+          </section>
+          <div class="main-text">
+            <p>
+              <strong>THANK YOU</strong> for choosing Rehoboth Beach area for your work/travel program. You are sure to have an experience of a lifetime.
+              <br/>
+              <br/>
+              To enhance your visit and to make your stay as enjoyable as possible, please give us your name and email address so we can contact you about upcoming events and any schedule changes.
+              <br/>
+              <br/>
+              By sending us your name and email, you will be automatically entered in a drawing to win a $50 gift certificate to use at some of the many shops and restaurants in Rehoboth.
+              We'll let you know when the drawing takes place, and who the lucky winner is!
+              <br/>
+              <br/>
+              This website will give you information about the International Student Outreach Program, which provides free dinners every Monday through Thursday,
+              free bicycles to use this summer (until we run out of bikes) and exciting trips planned just for you!
+              <br/>
+              <a href="https://www.beach-fun.com/site-index/57-international-student-outreach-program.html" target="_blank">Click here</a>
+              for the Rehoboth Chamber of Commerce website for helpful information for your visit.
+            </p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Contact Us Section</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bike-form" class="bike-form-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Bike Request Form Section</h1>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </body>
