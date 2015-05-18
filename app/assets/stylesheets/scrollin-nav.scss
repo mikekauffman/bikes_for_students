@@ -1,3 +1,7 @@
+$primary-teal: #68B3AF;
+$orange: #F07818;
+$rose: #FF4D5E;
+
 body {
     width: 100%;
     height: 100%;
@@ -8,13 +12,17 @@ html {
     height: 100%;
 }
 
+h1 {
+  color: $rose;
+}
+
 .navbar-nav > .active > a {
   background-color: #87BDB1 !important;
 }
 
 .navbar {
   border: none !important;
-  background-color: #68B3AF;
+  background-color: $primary-teal;
 }
 
 @media (min-width:767px) {
@@ -42,9 +50,16 @@ html {
 
 .dinner-section {
     min-height: 100%;
-    padding-top: 150px;
+    padding-top: 75px;
     text-align: center;
     background: #eee;
+    a:hover {
+      color: $primary-teal;
+    }
+    h1 {
+      margin-top: 0;
+      margin-bottom: 40px
+    }
 }
 
 .bike-section {

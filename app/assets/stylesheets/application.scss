@@ -5,10 +5,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Special+Elite);
 
-$primary-teal: #68B3AF;
-$orange: #F07818;
-$rose: #FF4D5E;
-
 a {
   font-weight: bolder;
   color: $rose;
@@ -80,5 +76,13 @@ a {
   }
   strong {
     color: $orange;
+  }
+}
+
+table.table-bordered {
+  margin: 0 5%;
+  width: 90%;
+  th {
+    text-align: center;
   }
 }
