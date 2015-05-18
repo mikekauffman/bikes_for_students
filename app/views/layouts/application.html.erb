@@ -2,11 +2,100 @@
 <html>
   <head>
   <title>J-1 Rehoboth</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
     <script>$(function(){ new Slideshow(); });</script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNEM6k1Aox4w1NXSdUglN5lvy58Gp2cFY"></script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          scrollwheel: false,
+          center: { lat: 38.7391057, lng: -75.1070519},
+          zoom: 13
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+
+        var epworthMarker = new google.maps.Marker({
+            position: { lat: 38.7191057, lng: -75.1070519},
+            map: map,
+            title: 'Epworth United Methodist Church'
+        });
+        var epworthcontentString =  '<div id="content">'+
+                                    '<h1>Epworth United Methodist Church</h1>'+
+                                    '<p>19285 Holland Glade Road - <a target="_blank" href="https://maps.google.com/maps?daddr=19285 Holland Glade Road, Rehoboth Beach&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a></p>'+
+                                    '</div>';
+        var epworthinfowindow = new google.maps.InfoWindow({
+            content: epworthcontentString
+        });
+        google.maps.event.addListener(epworthMarker, 'click', function() {
+            epworthinfowindow.open(map,epworthMarker);
+        });
+        google.maps.event.addListener(map, 'click', function() {
+            epworthinfowindow.close();
+        });
+
+        var edmondsMarker = new google.maps.Marker({
+            position: { lat: 38.712893, lng: -75.078646},
+            map: map,
+            title: 'St. Edmond’s Catholic Church'
+        });
+        var edmondscontentString =  '<div id="content">'+
+                                    '<h1>St. Edmond’s Catholic Church</h1>'+
+                                    '<p>409 King Charles Ave - <a target="_blank" href="https://maps.google.com/maps?daddr=409 King Charles Ave, Rehoboth Beach&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a></p>'+
+                                    '</div>';
+        var edmondsinfowindow = new google.maps.InfoWindow({
+            content: edmondscontentString
+        });
+        google.maps.event.addListener(edmondsMarker, 'click', function() {
+            edmondsinfowindow.open(map,edmondsMarker);
+        });
+        google.maps.event.addListener(map, 'click', function() {
+            edmondsinfowindow.close();
+        });
+
+        var lutheranMarker = new google.maps.Marker({
+            position: { lat: 38.709315, lng: -75.098111},
+            map: map,
+            title: 'Lutheran Church of our Savior'
+        });
+        var lutherancontentString =  '<div id="content">'+
+                                    '<h1>Lutheran Church of our Savior</h1>'+
+                                    '<p>20276 Bay Vista Rd - <a target="_blank" href="https://maps.google.com/maps?daddr=20276 Bay Vista Rd, Rehoboth Beach&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a></p>'+
+                                    '</div>';
+        var lutheraninfowindow = new google.maps.InfoWindow({
+            content: lutherancontentString
+        });
+        google.maps.event.addListener(lutheranMarker, 'click', function() {
+            lutheraninfowindow.open(map,lutheranMarker);
+        });
+        google.maps.event.addListener(map, 'click', function() {
+            lutheraninfowindow.close();
+        });
+
+        var covenantMarker = new google.maps.Marker({
+            position: { lat: 38.748204, lng: -75.15368},
+            map: map,
+            title: 'New Covenant Church'
+        });
+        var covenantcontentString =  '<div id="content">'+
+                                    '<h1>New Covenant Church</h1>'+
+                                    '<p>3072 Savannah E Dr - <a target="_blank" href="https://maps.google.com/maps?daddr=3072 Savannah E Dr, Lewes, DE&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a></p>'+
+                                    '</div>';
+        var covenantinfowindow = new google.maps.InfoWindow({
+            content: covenantcontentString
+        });
+        google.maps.event.addListener(covenantMarker, 'click', function() {
+            covenantinfowindow.open(map,covenantMarker);
+        });
+        google.maps.event.addListener(map, 'click', function() {
+            covenantinfowindow.close();
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
   </head>
 
   <%= yield %>

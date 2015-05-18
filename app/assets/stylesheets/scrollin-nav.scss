@@ -35,19 +35,29 @@ html {
     padding-top: 150px;
     text-align: center;
     background: #fff;
+    @media (max-width: 770px) {
+      padding-top: 75px;
+    }
 }
 
-.contact-section {
+.dinner-section {
     min-height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #eee;
 }
 
-.bike-form-section {
+.bike-section {
     min-height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
+}
+
+.trip-section {
+    min-height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
 }
 

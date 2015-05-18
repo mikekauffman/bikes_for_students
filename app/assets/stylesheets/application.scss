@@ -5,6 +5,21 @@
 
 @import url(https://fonts.googleapis.com/css?family=Special+Elite);
 
+$primary-teal: #68B3AF;
+$orange: #F07818;
+$rose: #FF4D5E;
+
+a {
+  font-weight: bolder;
+  color: $rose;
+  &:hover {
+    color: $primary-teal;
+  }
+  &:visited, &:active {
+    color: $rose;
+  }
+}
+
 .main-container {
   background-color: #D3E2B6;
 }
@@ -17,6 +32,8 @@
     font-size: 1.5em;
   }
 }
+
+#map-canvas { height: 100%; width: 100%; margin: 0; padding: 0;}
 
 .intro-section {
   .hero-image {
@@ -36,6 +53,13 @@
       background: none;
     }
   }
+
+  .callout {
+    width: 100%;
+    padding: 10px;
+    background-color: #D3E2B6;
+    margin: 10px 0;
+  }
 }
 
 .welcome-text {
@@ -43,7 +67,7 @@
   display: inline-block;
   font-weight: bolder;
   font-size: 2em;
-  color: #F07818;
+  color: $orange;
   @media (max-width: 770px) {
     font-size: 1.5em;
   }
@@ -55,10 +79,6 @@
     margin-top: 20px;
   }
   strong {
-    color: #F07818;
-  }
-  a {
-    font-weight: bold;
-    color: #F07818;
+    color: $orange;
   }
 }
