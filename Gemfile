@@ -14,7 +14,6 @@ gem 'sass-rails', '>= 3.2'
 gem 'uglifier'
 gem 'faraday'
 gem 'figaro'
-gem 'mailcatcher'
 
 group :development do
 gem 'guard-rspec'
