@@ -1,0 +1,9 @@
+<h1>Someone has signed up for the newsletter!</h1>
+<p>
+Their information is:
+</p>
+<% @user_details.each do |k, v| %>
+  <p>
+    <%= k %>: <%= v %>
+  </p>
+<% end %>

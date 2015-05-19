@@ -97,6 +97,12 @@
       google.maps.event.addDomListener(window, 'load', initialize);
       google.maps.event.addDomListener(window, 'resize', initialize);
     </script>
+    <script type="text/javascript">
+      $('#bike-forms a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+    </script>
   </head>
 
   <%= yield %>

@@ -1,0 +1,9 @@
+<h1>Someone has filled out the repair request form!</h1>
+<p>
+Their information is:
+</p>
+<% @user_details.each do |k, v| %>
+  <p>
+    <%= k %>: <%= v %>
+  </p>
+<% end %>

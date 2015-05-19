@@ -44,7 +44,7 @@
               The Mayor of Rehoboth Beach welcomes you to Rehoboth and would like you to join him for a free lunch on 
               <strong>June 11 at City Hall</strong>.
               <br/>
-              <a href="mailto:j1rehoboth@gmail.com?Subject=Meet%20The%20Mayor" target="_top">Send us an Email if you are interested</a>
+              <a href="mailto:j1rehoboth@gmail.com?Subject=Meet%20The%20Mayor" target="_top">Click here to send us an Email if you are interested</a>
             </h4>
           </div>
           <section class="slideshow">
@@ -62,7 +62,17 @@
               <br/>
               <br/>
               To enhance your visit and to make your stay as enjoyable as possible, please give us your name and email address so we can contact you about upcoming events and any schedule changes.
-              <br/>
+              <form class="form-inline" action="/newsletter" method="POST">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="John Smith">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="john.smith@gmail.com">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
               <br/>
               By sending us your name and email, you will be automatically entered in a drawing to win a $50 gift certificate to use at some of the many shops and restaurants in Rehoboth.
               We'll let you know when the drawing takes place, and who the lucky winner is!
@@ -113,7 +123,7 @@
             <p>(May 26 - Sept 8)</p>
           </td>
           <td>
-            <p>6:00 - 7:30 PM </p>
+            <p>5:30 - 7:30 PM </p>
             <p>St. Edmond’s Catholic Church</br>
             409 King Charles Ave</br>
             <a target="_blank" href="https://maps.google.com/maps?daddr=409 King Charles Ave, Rehoboth Beach&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a>
@@ -122,7 +132,7 @@
             <p>(May 27 - Aug 26)</p>
           </td>
           <td>
-            <p>6:00 - 7:30 PM</p>
+            <p>5:30 - 7:30 PM</p>
             <p>Lutheran Church of our Savior</br>
             20276 Bay Vista Rd </br>
             <a target="_blank" href="https://maps.google.com/maps?daddr=20276 Bay Vista Rd, Rehoboth Beach&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a>
@@ -152,8 +162,139 @@
   <section id="bikes" class="bike-section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
-          <h1>Bike Request Form Section</h1>
+        <div class="info col-xs-12 col-md-6">
+          <h1>Bike Program</h1>
+          <p>
+          <strong>FINDING A BIKE:</strong>  Check with your employer and landlord first. If they do not have a bike for you, the Lewes Rehoboth Association of Churches (LRAC) has 150 free bikes with proper lighting to loan students. Sign up to request a bicycle by filling out the bike request form or by sending an email to: <a href="mailto:bicycles4students@gmail.com" target="_blank">bicycles4students@gmail.com</a>. You will be required to attend one safety information session in order to receive a bicycle. We will schedule you for a safety session and a bike when you email us. Please understand that we will have more students than bikes.  If we are not able to provide you with a bike, we recommend shopping for one at K-Mart, or contacting the local thrift shops to see if they have any bikes for sale.
+          </p>
+          <p>
+          <strong>REPAIRS:</strong> Bicycle mechanics are usually available at the church dinners to repair all bikes (LRAC, purchased or employer bikes) or you can arrange for a repair by filling out the repair request form or by sending an email to: <a href="mailto:bicycles4students@gmail.com" target="_blank">bicycles4students@gmail.com</a>.
+          </p>
+          <p>
+            <strong>LOCKS:</strong>  In order to get a free bike loaned to you, you must bring a bicycle lock with you to the safety session. Locks can be purchased at K-Mart or Wal-Mart. We will try to have some locks for sale at the safety session, but purchasing one on your own is best. You must keep your bike locked at all times. Every year bikes are stolen. Don't lose yours!
+          </p>
+          <p>
+            <strong>SAFETY:</strong>  Helmets are highly recommended and will be given to everyone who gets a bike from LRAC.  Delaware offers free Bicycle Safety Checkpoints throughout the summer and free helmets are available at the checkpoints. Click here to view 2014 Bicycle Safety Checkpoints. If you need a helmet and cannot afford one, please email <a href="mailto:bicycles4students@gmail.com" target="_blank">bicycles4students@gmail.com</a> and we will get one for you. We cannot over emphasize the need to wear a helmet. Coastal Highway has a lot of traffic and a lot of drivers who are on vacation and not familiar with the area. Serious accidents happen every summer and a helmet could save your life.   
+          </p>
+          <p>
+            <strong>BICYCLE LAWS:</strong> A bicycle is a vehicle and bicyclists must obey the same laws as drivers of other vehicles. Delaware State law requires the following of all bicyclists:  Bicyclists must obey all traffic laws including stopping at red lights and stop signs, as well as yielding at yield signs and to pedestrians; Bicyclists must ride on the right side of the road, in the same direction as traffic, not facing traffic; A bicycle must have a headlight in front and rear red reflector or rear light if ridden in low light conditions.  Failure to obey these laws will result in a fine. Bicycles are allowed to ride on the sidewalks on either side of Coastal Highway, but bikes are not allowed on the sidewalks in the town of Rehoboth.
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div role="tabpanel">
+            <ul class="nav nav-tabs" id="bike-forms" role="tablist">
+              <li role="presentation" class="col-xs-6 active"><a href="#request" aria-controls="request" role="tab" data-toggle="tab"><h2>Need a Bike</h2></a></li>
+              <li role="presentation" class="col-xs-6"><a href="#repair" aria-controls="repair" role="tab" data-toggle="tab"><h2>Repairs</h2></a></li>
+            </ul>
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="request">
+                <h3>Please Fill Out This Bike Request Form</h3>
+                </br>
+                <form class="form-horizontal"action="/bike_request" method="post">
+                  <div class="form-group">
+                    <label for="first_name" class="col-sm-2 control-label">First</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" name="first_name" placeholder="John" tabIndex="1">
+                    </div>
+                    <label for="last_name" class="col-sm-2 control-label">Last</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" name="last_name" placeholder="Smith" tabIndex="2">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" name="email" placeholder="john.smith@gmail.com" tabIndex="3">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="phone" class="col-sm-2 control-label">Phone</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="phone" placeholder="303-333-8747" tabIndex="4">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="country" class="col-sm-2 control-label">Country</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="country" placeholder="Switzerland" tabIndex="5">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="sponsor" class="col-sm-2 control-label">Sponsor</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="sponsor" placeholder="American Exchange Organization" tabIndex="6">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="employer" class="col-sm-2 control-label">Employer</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="employer" placeholder="Cold Stone Creamery" tabIndex="7">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="height" class="col-sm-2 control-label">Height(m)</label>
+                    <div class="col-sm-4">
+                      <input type="number" min="1" step="0.1" class="form-control" name="height" placeholder="1.7" tabIndex="8">
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="radio-inline">
+                        <input type="radio" name="sex" value="male"> Male
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="sex" value="female"> Female
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default" tabIndex="9">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="repair">
+                <h3>Please Fill Out This Repair Request Form</h3>
+                </br>
+                <form class="form-horizontal"action="/repair_request" method="post">
+                  <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Name</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="name" placeholder="John" tabIndex="1">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                      <input type="email" class="form-control" name="email" placeholder="john.smith@gmail.com" tabIndex="2">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="phone" class="col-sm-3 control-label">Phone</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="phone" placeholder="303-333-8747" tabIndex="3">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="bike_location" class="col-sm-3 control-label">Bike Location</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="bike_location" placeholder="123 Rehoboth Ave" tabIndex="4">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="problem" class="col-sm-3 control-label">Problem</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="problem" placeholder="Back tire is flat." tabIndex="5">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default" tabIndex="9">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -163,7 +304,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h1>Trip Section</h1>
+          <h1>Check back later for trip information.</h1>
         </div>
       </div>
     </div>

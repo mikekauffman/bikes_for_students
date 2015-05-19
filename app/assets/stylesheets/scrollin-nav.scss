@@ -4,6 +4,7 @@ $rose: #FF4D5E;
 
 body {
     width: 100%;
+    overflow-x: hidden;
     height: 100%;
 }
 
@@ -40,7 +41,10 @@ h1 {
 
 .intro-section {
     min-height: 100%;
-    padding-top: 150px;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 100px;
     text-align: center;
     background: #fff;
     @media (max-width: 770px) {
@@ -50,23 +54,32 @@ h1 {
 
 .dinner-section {
     min-height: 100%;
-    padding-top: 75px;
+    max-height: 100%;
+    overflow-y: auto;
+    padding-top: 50px;
     text-align: center;
     background: #eee;
     a:hover {
       color: $primary-teal;
     }
     h1 {
-      margin-top: 0;
-      margin-bottom: 40px
+      margin: 1% 0;
     }
 }
 
 .bike-section {
     min-height: 100%;
-    padding-top: 150px;
+    max-height: 100%;
+    overflow-y: auto;
+    padding-top: 50px;
     text-align: center;
     background: #fff;
+    .info {
+      text-align: left;
+    }
+    h1 {
+      text-align: center;
+    }
 }
 
 .trip-section {
