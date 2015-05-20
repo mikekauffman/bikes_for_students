@@ -2,8 +2,9 @@
 <p>
 Their information is:
 </p>
-<% @user_details.each do |k, v| %>
   <p>
-    <%= k %>: <%= v %>
+    Name: <%= @newsletter.name %>
   </p>
-<% end %>
+  <p>
+    Email: <%= @newsletter.email %>
+  </p>

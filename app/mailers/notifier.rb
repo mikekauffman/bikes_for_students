@@ -5,8 +5,8 @@ class Notifier < ApplicationMailer
     mail(to: "bicycles4students@gmail.com", subject: "New Bike Request")
   end
 
-  def newsletter(hashed_params)
-    @user_details = hashed_params
+  def newsletter(newsletter)
+    @newsletter = newsletter
     mail(to: "j1rehoboth@gmail.com", subject: "Newsletter Signup")
   end
 

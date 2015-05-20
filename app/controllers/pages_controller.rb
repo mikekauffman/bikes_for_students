@@ -9,7 +9,11 @@ class PagesController < ApplicationController
   end
 
   def newsletter
-    Notifier.newsletter(prune(params)).deliver_now
+    newsletter = Newsletter.create(
+      name: params[:name],
+      email: params[:email]
+    )
+    Notifier.newsletter(newsletter).deliver_now
     redirect_to :root
   end
 
