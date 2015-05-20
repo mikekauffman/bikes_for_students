@@ -27,6 +27,26 @@ class PagesController < ApplicationController
     redirect_to :root
   end
 
+  def admin
+    if logged_in?
+      @emails = Newsletter.pluck(:email).uniq!
+    else
+      redirect_to login_path
+    end
+  end
+
+  def login
+  end
+
+  def auth
+    if params[:password] == ENV["admin_password"]
+      session[:id] = true
+      redirect_to admin_path
+    else
+      render :login
+    end
+  end
+
   private
 
   def prune(params)
@@ -34,6 +54,10 @@ class PagesController < ApplicationController
     hashed_params.delete("controller")
     hashed_params.delete("action")
     hashed_params
+  end
+
+  def logged_in?
+    session[:id] ? true : false
   end
 
 end
