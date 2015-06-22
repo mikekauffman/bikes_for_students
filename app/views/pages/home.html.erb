@@ -37,21 +37,21 @@
       <div class="row">
         <div class="col-xs-12 alert alert-warning" role="alert">
           <strong>
-            Dear Students, In light of the tragic accident involving one of our J1 students, we have arranged for ministers, priests, and pastoral care staff to be available at all the dinners this week. Please know that you can talk to any one of them during this difficult time. If you would like to meet with a counselor on a continuing basis, we will make arrangements. Please just let us know. You can send an email to: <a href="mailto:j1rehoboth@gmail.com?Subject=Counseling" target="_top"> j1rehoboth@gmail.com</a>
+            Dear Students, In light of the tragic accident involving one of our J1 students, we can arrange for free grief counseling for any student on a continuing basis.<br/>Please just let us know. You can send an email to: <a href="mailto:j1rehoboth@gmail.com?Subject=Counseling" target="_top"> j1rehoboth@gmail.com</a>
         </strong>
         </div>
         <div class="col-lg-12">
           <% @welcome_languages.each do |lang| %>
             <div class="welcome-text"><%= lang %></div>
           <% end %>
-          <div class="callout">
-            <h4>
-              The Mayor of Rehoboth Beach welcomes you to Rehoboth and would like you to join him for a free lunch on 
-              <strong>June 11 at City Hall</strong>.
-              <br/>
-              <a href="mailto:j1rehoboth@gmail.com?Subject=Meet%20The%20Mayor" target="_top">Click here to send us an Email if you are interested</a>
-            </h4>
-          </div>
+          <%# <div class="callout"> %>
+            <%# <h4> %>
+              <%# The Mayor of Rehoboth Beach welcomes you to Rehoboth and would like you to join him for a free lunch on  %>
+              <%# <strong>June 11 at City Hall</strong>. %>
+              <%# <br/> %>
+              <%# <a href="mailto:j1rehoboth@gmail.com?Subject=Meet%20The%20Mayor" target="_top">Click here to send us an Email if you are interested</a> %>
+            <%# </h4> %>
+          <%# </div> %>
           <section class="slideshow">
             <div class="slides">
               <% for i in 1..5 do %>
@@ -167,9 +167,11 @@
   <section id="bikes" class="bike-section">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 alert alert-warning" role="alert"><strong>
-          All 150 bikes have been assigned to students on a first come, first served basis. Sorry we cannot provide you with a bike at this time. You may send a bike request form, and it will be kept in the order in which it is received in the event someone who has already requested a bike no longer needs one. We will not be responding to request form submissions or emails unless we can provide you with a bike.
-        </strong></div>
+        <div class="col-xs-12 alert alert-warning" role="alert">
+          <strong>
+            Sorry, We Are Out Of Bikes.
+          </strong>
+        </div>
         <div class="info col-xs-12 col-md-6">
           <h1>Bike Program</h1>
           <p>
@@ -191,66 +193,66 @@
         <div class="col-xs-12 col-md-6">
           <div role="tabpanel">
             <ul class="nav nav-tabs" id="bike-forms" role="tablist">
-              <li role="presentation" class="col-xs-6 active"><a href="#request" aria-controls="request" role="tab" data-toggle="tab"><h2>Need a Bike</h2></a></li>
-              <li role="presentation" class="col-xs-6"><a href="#repair" aria-controls="repair" role="tab" data-toggle="tab"><h2>Repairs</h2></a></li>
+              <%# <li role="presentation" class="col-xs-6 active"><a href="#request" aria-controls="request" role="tab" data-toggle="tab"><h2>Need a Bike</h2></a></li> %>
+              <li role="presentation" class="col-xs-6 active"><a href="#repair" aria-controls="repair" role="tab" data-toggle="tab"><h2>Repairs</h2></a></li>
             </ul>
-            <div class="tab-content">
-              <div role="tabpanel" class="tab-pane active" id="request">
-                <h3>Please Fill Out This Bike Request Form</h3>
-                </br>
-                <form class="form-horizontal"action="/bike_request" method="post">
-                  <div class="form-group">
-                    <label for="first_name" class="col-sm-2 control-label">First</label>
-                    <div class="col-sm-4">
-                      <input type="text" class="form-control" name="first_name" placeholder="John" tabIndex="1">
-                    </div>
-                    <label for="last_name" class="col-sm-2 control-label">Last</label>
-                    <div class="col-sm-4">
-                      <input type="text" class="form-control" name="last_name" placeholder="Smith" tabIndex="2">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="email" class="col-sm-2 control-label">Email</label>
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control" name="email" placeholder="john.smith@gmail.com" tabIndex="3">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="arrival_date" class="col-sm-2 control-label">Arrival</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" name="arrival_date" placeholder="June 1, 2015" tabIndex="4">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="country" class="col-sm-2 control-label">Country</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" name="country" placeholder="Switzerland" tabIndex="5">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="employer" class="col-sm-2 control-label">Employer</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" name="employer" placeholder="Cold Stone Creamery" tabIndex="7">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <label class="radio-inline">
-                        <input type="radio" name="sex" value="male"> Male
-                      </label>
-                      <label class="radio-inline">
-                        <input type="radio" name="sex" value="female"> Female
-                      </label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-default" tabIndex="9">Submit</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div role="tabpanel" class="tab-pane" id="repair">
+            <%# <div class="tab-content"> %>
+              <%# <div role="tabpanel" class="tab-pane active" id="request"> %>
+                <%# <h3>Please Fill Out This Bike Request Form</h3> %>
+                <%# </br> %>
+                <%# <form class="form-horizontal"action="/bike_request" method="post"> %>
+                  <%# <div class="form-group"> %>
+                    <%# <label for="first_name" class="col-sm-2 control-label">First</label> %>
+                    <%# <div class="col-sm-4"> %>
+                      <%# <input type="text" class="form-control" name="first_name" placeholder="John" tabIndex="1"> %>
+                    <%# </div> %>
+                    <%# <label for="last_name" class="col-sm-2 control-label">Last</label> %>
+                    <%# <div class="col-sm-4"> %>
+                      <%# <input type="text" class="form-control" name="last_name" placeholder="Smith" tabIndex="2"> %>
+                    <%# </div> %>
+                  <%# </div> %>
+                  <%# <div class="form-group"> %>
+                    <%# <label for="email" class="col-sm-2 control-label">Email</label> %>
+                    <%# <div class="col-sm-10"> %>
+                      <%# <input type="email" class="form-control" name="email" placeholder="john.smith@gmail.com" tabIndex="3"> %>
+                    <%# </div> %>
+                  <%# </div> %>
+                  <%# <div class="form-group"> %>
+                    <%# <label for="arrival_date" class="col-sm-2 control-label">Arrival</label> %>
+                    <%# <div class="col-sm-10"> %>
+                      <%# <input type="text" class="form-control" name="arrival_date" placeholder="June 1, 2015" tabIndex="4"> %>
+                    <%# </div> %>
+                  <%# </div> %>
+                  <%# <div class="form-group"> %>
+                    <%# <label for="country" class="col-sm-2 control-label">Country</label> %>
+                    <%# <div class="col-sm-10"> %>
+                      <%# <input type="text" class="form-control" name="country" placeholder="Switzerland" tabIndex="5"> %>
+                    <%# </div> %>
+                  <%# </div> %>
+                  <%# <div class="form-group"> %>
+                    <%# <label for="employer" class="col-sm-2 control-label">Employer</label> %>
+                    <%# <div class="col-sm-10"> %>
+                      <%# <input type="text" class="form-control" name="employer" placeholder="Cold Stone Creamery" tabIndex="7"> %>
+                    <%# </div> %>
+                  <%# </div> %>
+                  <%# <div class="form-group"> %>
+                    <%# <div class="col-sm-offset-2 col-sm-10"> %>
+                      <%# <label class="radio-inline"> %>
+                        <%# <input type="radio" name="sex" value="male"> Male %>
+                      <%# </label> %>
+                      <%# <label class="radio-inline"> %>
+                        <%# <input type="radio" name="sex" value="female"> Female %>
+                      <%# </label> %>
+                    <%# </div> %>
+                  <%# </div> %>
+                  <%# <div class="form-group"> %>
+                    <%# <div class="col-sm-offset-2 col-sm-10"> %>
+                      <%# <button type="submit" class="btn btn-default" tabIndex="9">Submit</button> %>
+                    <%# </div> %>
+                  <%# </div> %>
+                <%# </form> %>
+              <%# </div> %>
+              <div role="tabpanel" class="tab-pane active" id="repair">
                 <h3>Please Fill Out This Repair Request Form</h3>
                 </br>
                 <form class="form-horizontal"action="/repair_request" method="post">
