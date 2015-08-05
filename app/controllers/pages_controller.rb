@@ -29,7 +29,7 @@ class PagesController < ApplicationController
 
   def admin
     if logged_in?
-      @emails = Newsletter.pluck(:email).uniq!
+      @emails = Newsletter.pluck(:email).uniq.reject(&:empty?)
     else
       redirect_to login_path
     end
