@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def home
     @welcome_languages = WELCOME_LANGUAGES
+    render :temp
   end
 
   def newsletter
