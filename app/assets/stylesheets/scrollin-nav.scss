@@ -40,14 +40,40 @@ h1 {
 }
 
 .intro-section {
-    min-height: 100%;
+    min-height: 50%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 100px;
+    text-align: center;
+    background: #D3E2B6;
+    @media (max-width: 770px) {
+      padding: 75px 0;
+    }
+}
+
+.housing-section {
+    min-height: 50%;
     overflow-y: auto;
     overflow-x: hidden;
     padding-top: 100px;
     text-align: center;
     background: #fff;
+    padding: 100px 0;
     @media (max-width: 770px) {
-      padding-top: 75px;
+      padding: 75px 0;
+    }
+}
+
+.orientation-section {
+    min-height: 50%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 100px;
+    text-align: center;
+    background: #eee;
+    padding: 100px 0;
+    @media (max-width: 770px) {
+      padding: 75px 0;
     }
 }
 
@@ -57,12 +83,22 @@ h1 {
     overflow-y: auto;
     padding-top: 50px;
     text-align: center;
-    background: #eee;
+    background: #fff;
     a:hover {
       color: $primary-teal;
     }
     h1 {
       margin: 1% 0;
+    }
+}
+
+.trip-section {
+    min-height: 50%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+    @media (max-width: 770px) {
+      padding: 75px 0;
     }
 }
 
@@ -80,11 +116,3 @@ h1 {
       text-align: center;
     }
 }
-
-.trip-section {
-    min-height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #eee;
-}
-

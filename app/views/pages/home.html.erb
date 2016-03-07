@@ -18,13 +18,19 @@
             <a class="page-scroll" href="#page-top"></a>
           </li>
           <li>
+            <a class="page-scroll" href="#housing">Housing</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#orientation">Orientation Program</a>
+          </li>
+          <li>
             <a class="page-scroll" href="#dinners">Free Dinners</a>
           </li>
           <li>
-            <a class="page-scroll" href="#bikes">Bikes</a>
+            <a class="page-scroll" href="#trips">Cultural Exchange Events & Trips</a>
           </li>
           <li>
-            <a class="page-scroll" href="#trips">Trips</a>
+            <a class="page-scroll" href="#bikes">Bikes</a>
           </li>
         </ul>
       </div>
@@ -32,65 +38,82 @@
   </nav>
 
   <section id="intro" class="intro-section">
-    <div class="hero-image"></div>
+    <%# <div class="hero-image"></div> %>
+    <div class="container">
+      <div class="col-lg-12">
+        <% @welcome_languages.each do |lang| %>
+          <div class="welcome-text"><%= lang %></div>
+        <% end %>
+        <%# <div class="callout"> %>
+          <%# <h4> %>
+            <%# The Mayor of Rehoboth Beach welcomes you to Rehoboth and would like you to join him for a free lunch on  %>
+            <%# <strong>June 11 at City Hall</strong>. %>
+            <%# <br/> %>
+            <%# <a href="mailto:j1rehoboth@gmail.com?Subject=Meet%20The%20Mayor" target="_top">Click here to send us an Email if you are interested</a> %>
+          <%# </h4> %>
+        <%# </div> %>
+        <section class="slideshow">
+          <div class="slides">
+            <% for i in 1..5 do %>
+              <div class="slide">
+                <img src="Students<%=i%>.jpg"/>
+              </div>
+            <% end %>
+          </div>
+        </section>
+        <div class="main-text">
+          <p>
+            <strong>THANK YOU</strong> for choosing Rehoboth Beach area for your work/travel program. You are sure to have an experience of a lifetime.
+            <form class="form-inline" action="/newsletter" method="POST">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="John Smith">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="john.smith@gmail.com">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <br/>
+This website will give you information about the International Student Outreach Program, which provides a welcome orientation session for all students, free dinners every Monday through Thursday, local cultural exchange opportunities and exciting trips planned just for you!
+            <br/>
+            <br/>
+            The Delaware Department of Transportation has a limited number of free bicycles to give to students  who take the two-hour bicycle safety training session.
+            <br/>
+            <br/>
+            Fill out and submit the request form by <a href="#bikes">clicking here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="housing" class="housing-section">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 alert alert-warning" role="alert">
-          <strong>
-            The drawing for the $50 gift card has taken place and the winner will be announced via email.
-            </br>Please sign up for our newsletter below to receive updates about trips and dinners.
-          </strong>
+        <div class="col-xs-12 col-md-offset-3 col-md-6">
+          <h1 class="text-center">Housing</h1>
+          </br>
+          <p>
+            Rehoboth Beach, Dewey Beach and Lewes are very popular vacation destinations. Because of this, affordable, convenient housing is extremely difficult to find.  You must arrange your housing before arriving in the U.S.  Do not plan to find housing once you arrive.
+            </br>
+            Your sponsor organization will require you to give them your Rehoboth area address before you leave your home country. Ask your sponsor for housing help, ask your employer for help, check craigslist.com, the local paper (Cape Gazette) or contact a realtor.
+          </p>
         </div>
-        <div class="col-lg-12">
-          <% @welcome_languages.each do |lang| %>
-            <div class="welcome-text"><%= lang %></div>
-          <% end %>
-          <%# <div class="callout"> %>
-            <%# <h4> %>
-              <%# The Mayor of Rehoboth Beach welcomes you to Rehoboth and would like you to join him for a free lunch on  %>
-              <%# <strong>June 11 at City Hall</strong>. %>
-              <%# <br/> %>
-              <%# <a href="mailto:j1rehoboth@gmail.com?Subject=Meet%20The%20Mayor" target="_top">Click here to send us an Email if you are interested</a> %>
-            <%# </h4> %>
-          <%# </div> %>
-          <section class="slideshow">
-            <div class="slides">
-              <% for i in 1..5 do %>
-                <div class="slide">
-                  <img src="Students<%=i%>.jpg"/>
-                </div>
-              <% end %>
-            </div>
-          </section>
-          <div class="main-text">
-            <p>
-              <strong>THANK YOU</strong> for choosing Rehoboth Beach area for your work/travel program. You are sure to have an experience of a lifetime.
-              <br/>
-              <br/>
-              To enhance your visit and to make your stay as enjoyable as possible, please give us your name and email address so we can contact you about upcoming events and any schedule changes.
-              <form class="form-inline" action="/newsletter" method="POST">
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="John Smith">
-                </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="john.smith@gmail.com">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-              </form>
-              <br/>
-              By sending us your name and email, you will be automatically entered in a drawing to win a $50 gift certificate to use at some of the many shops and restaurants in Rehoboth.
-              We'll let you know when the drawing takes place, and who the lucky winner is!
-              <br/>
-              <br/>
-              This website will give you information about the International Student Outreach Program, which provides free dinners every Monday through Thursday,
-              free bicycles to use this summer (until we run out of bikes) and exciting trips planned just for you!
-              <br/>
-              <a href="https://www.beach-fun.com/site-index/57-international-student-outreach-program.html" target="_blank">Click here</a>
-              for the Rehoboth Chamber of Commerce website for helpful information for your visit.
-            </p>
-          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="orientation" class="orientation-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-offset-3 col-md-6">
+          <h1 class="text-center">Orientation and Welcome</h1>
+          </br>
+          <p>
+            You are invited and encouraged to attend one of the Orientation and Welcome sessions as soon as you arrive in the Rehoboth area, preferably before you start working. The dates and locations for the sessions will be posted soon. Please check back. The session will include information about applying for your social security card, banking info, personal safety, transportation, and important information you'll need during your stay. Also, FREE FOOD and a chance to win a prize.
+          </p>
         </div>
       </div>
     </div>
@@ -165,95 +188,137 @@
     </div>
   </div>
 
+  <section id="trips" class="trip-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-offset-3">
+          <h2 class="text-center">Information about trips and cultural exchange opportunities will be available soon. Please check back later.</h2>
+        </div>
+        <%# <div class="col-xs-12 col-sm-6 col-md-4"> %>
+          <%# <div class="thumbnail"> %>
+            <%# <img src="capitol.jpg" alt="US Capitol"> %>
+            <%# <div class="caption"> %>
+              <%# <h3>Washington, DC - July 7th</h3> %>
+              <%# <h4>Cost: $30</h4> %>
+              <%# <h4>Time: 7:00am - 8:00pm</h4> %>
+              <%# <h4 style="color: #68B3AF">SOLD OUT - 98 students attended</h4> %>
+              <%# <p>Details: Meeting at the K-Mart in Rehoboth (19563 Coastal Hwy) and leaving at 7:00am. We will be dropped off in front of the Smithsonian Castle. We will be departing DC at 5:30pm. Students will need to bring money for lunch, dinner and souvenirs.</p> %>
+            <%# </div> %>
+          <%# </div> %>
+        <%# </div> %>
+        <%# <div class="col-xs-12 col-sm-6 col-md-4"> %>
+          <%# <div class="thumbnail"> %>
+            <%# <img src="six_flags.jpg" alt="Six Flags"> %>
+            <%# <div class="caption"> %>
+              <%# <h3>Six Flags America - July 28th</h3> %>
+              <%# <h4>Cost: $60</h4> %>
+              <%# <h4>Time: 7:00am - 9:00pm</h4> %>
+              <%# <h4 style="color: #68B3AF">SOLD OUT - 98 students attended</h4> %>
+              <%# <p>Details: Meeting at the K-Mart in Rehoboth and leaving at 7:30am. We will go to Six Flags and depart Six Flags at 7:00pm. Students will need to bring money for lunch, dinner and souvenirs. Six Flags has a water park, so bring your swimsuit and towel if you plan to use it.</p> %>
+            <%# </div> %>
+          <%# </div> %>
+        <%# </div> %>
+        <%# <div class="col-xs-12 col-sm-6 col-md-4"> %>
+          <%# <div class="thumbnail"> %>
+            <%# <img src="lancaster.jpg" alt="Amish Country, PA"> %>
+            <%# <div class="caption"> %>
+              <%# <h3>PA Dutch Trip - August 20th</h3> %>
+              <%# <h4>Cost: $50</h4> %>
+              <%# <h4>Time: 6:00am - 7:30pm</h4> %>
+              <%# <p>Details: Meeting at the K-Mart in Rehoboth and leaving at 6:00am. We will be visiting the Amish Museum, eating at Shady Maple Restaurant, shopping in Amish Country, attending a show at the American Music Theater. Depart PA at 5:00pm.</p> %>
+            <%# </div> %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="bikes" class="bike-section">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 alert alert-warning" role="alert">
-          <strong>
-            Sorry, We Are Out Of Bikes.
-          </strong>
-        </div>
+        <%# <div class="col-xs-12 alert alert-warning" role="alert"> %>
+          <%# <strong> %>
+            <%# Sorry, We Are Out Of Bikes. %>
+          <%# </strong> %>
+        <%# </div> %>
         <div class="info col-xs-12 col-md-6">
           <h1>Bike Program</h1>
           <p>
-          <strong>FINDING A BIKE:</strong>  Check with your employer and landlord first. If they do not have a bike for you, the Lewes Rehoboth Association of Churches (LRAC) has 150 free bikes with proper lighting to loan students. Sign up to request a bicycle by filling out the bike request form. You will be required to attend one safety information session in order to receive a bicycle. We will schedule you for a safety session and a bike when you email us. Please understand that we will have more students than bikes.  If we are not able to provide you with a bike, we recommend shopping for one at K-Mart, or contacting the local thrift shops to see if they have any bikes for sale.
+          <strong>FINDING A BIKE:</strong> Check with your employer and landlord first. If they do not have a bike for you, the Delaware Department of Transportation (DelDOT) has 150 free bikes with proper lighting to loan students. Sign up to request a bicycle by filling out the <a href="#bikes">Bike Request Form</a>. You will be required to attend one safety information session in order to receive a bicycle. We will schedule you for a safety session and a bike when you fill out the form. Please understand that we will have more students than bikes. If DelDOT is not able to provide you with a bike, we recommend shopping for one at K-Mart, WalMart, or contacting the local thrift shops to see if they have any bikes for sale.
           </p>
           <p>
-          <strong>REPAIRS:</strong> Bicycle mechanics are usually available at the church dinners to repair all bikes (LRAC, purchased or employer bikes) or you can arrange for a repair by filling out the repair request form.
+          <strong>REPAIRS:</strong> Bicycle mechanics are usually available at the church dinners to repair all student bikes, or you can arrange for a repair by filling out the <a href="#bikes">Bike Repair Request form</a>.
           </p>
           <p>
-            <strong>LOCKS:</strong>  In order to get a free bike loaned to you, you must bring a bicycle lock with you to the safety session. Locks can be purchased at K-Mart or Wal-Mart. We will try to have some locks for sale at the safety session, but purchasing one on your own is best. You must keep your bike locked at all times. Every year bikes are stolen. Don't lose yours!
+            <strong>LOCKS:</strong>  In order to get a free bike loaned to you, you must bring a bicycle lock with you to the safety session. Locks can be purchased at K-Mart or WalMart. DelDOT will try to have some locks for sale at the safety session, but purchasing one on your own is best. You must keep your bike locked at all times. Every year bikes are stolen. Don't lose yours!
           </p>
           <p>
-            <strong>SAFETY:</strong>  Helmets are highly recommended and will be given to everyone who gets a bike from LRAC.  Delaware offers free Bicycle Safety Checkpoints throughout the summer and free helmets are available at the checkpoints. Click here to view 2014 Bicycle Safety Checkpoints. If you need a helmet and cannot afford one, please email <a href="mailto:bicycles4students@gmail.com" target="_blank">bicycles4students@gmail.com</a> and we will get one for you. We cannot over emphasize the need to wear a helmet. Coastal Highway has a lot of traffic and a lot of drivers who are on vacation and not familiar with the area. Serious accidents happen every summer and a helmet could save your life.   
+          <strong>SAFETY:</strong>  Helmets are highly recommended and will be given to everyone who gets a bike from DelDOT. Delaware offers free Bicycle Safety Checkpoints throughout the summer and free helmets are available at the checkpoints. <a href="2016_Bicycle_Safety_Checkpoint_Schedule.pdf">Click here to view 2016 Bicycle Safety Checkpoints</a>. If you need a helmet, please email <a href="mailto:bicycles4students@gmail.com">bicycles4students@gmail.com</a> and we will get one for you. We cannot over emphasize the need to wear a helmet. Coastal Highway has a lot of traffic and a lot of drivers who are on vacation and not familiar with the area. Serious accidents happen every summer and a helmet could save your life.
           </p>
           <p>
-            <strong>BICYCLE LAWS:</strong> A bicycle is a vehicle and bicyclists must obey the same laws as drivers of other vehicles. Delaware State law requires the following of all bicyclists:  Bicyclists must obey all traffic laws including stopping at red lights and stop signs, as well as yielding at yield signs and to pedestrians; Bicyclists must ride on the right side of the road, in the same direction as traffic, not facing traffic; A bicycle must have a headlight in front and rear red reflector or rear light if ridden in low light conditions.  Failure to obey these laws will result in a fine. Bicycles are allowed to ride on the sidewalks on either side of Coastal Highway, but bikes are not allowed on the sidewalks in the town of Rehoboth.
+            <strong>BICYCLE LAWS:</strong> A bicycle is a vehicle and bicyclists must obey the same laws as drivers of other vehicles. Delaware State law requires the following of all bicyclists:  Bicyclists must obey all traffic laws including stopping at red lights and stop signs, as well as yielding at yield signs and to pedestrians; A bicycle must have a headlight in front and rear red reflector or rear light if ridden in low light conditions. DelDOT bikes come with lights, and free lights will be given out at some church dinners and the Bicycle Safety Checkpoints mentioned above. If you are stopped for riding a bike at night without lights, you will have to pay a fine. If you are riding on the street, you must ride on the right side of the street, in the same direction as traffic, not facing traffic. Bicycles are encouraged to ride on the sidewalks on either side of Coastal Highway, but bikes are not allowed on the sidewalks in the town of Rehoboth.
           </p>
         </div>
         <div class="col-xs-12 col-md-6">
           <div role="tabpanel">
             <ul class="nav nav-tabs" id="bike-forms" role="tablist">
-              <%# <li role="presentation" class="col-xs-6 active"><a href="#request" aria-controls="request" role="tab" data-toggle="tab"><h2>Need a Bike</h2></a></li> %>
-              <li role="presentation" class="col-xs-6 active"><a href="#repair" aria-controls="repair" role="tab" data-toggle="tab"><h2>Repairs</h2></a></li>
+              <li role="presentation" class="col-xs-6 active"><a href="#request" aria-controls="request" role="tab" data-toggle="tab"><h2>Need a Bike</h2></a></li>
+              <li role="presentation" class="col-xs-6"><a href="#repair" aria-controls="repair" role="tab" data-toggle="tab"><h2>Repairs</h2></a></li>
             </ul>
-            <%# <div class="tab-content"> %>
-              <%# <div role="tabpanel" class="tab-pane active" id="request"> %>
-                <%# <h3>Please Fill Out This Bike Request Form</h3> %>
-                <%# </br> %>
-                <%# <form class="form-horizontal"action="/bike_request" method="post"> %>
-                  <%# <div class="form-group"> %>
-                    <%# <label for="first_name" class="col-sm-2 control-label">First</label> %>
-                    <%# <div class="col-sm-4"> %>
-                      <%# <input type="text" class="form-control" name="first_name" placeholder="John" tabIndex="1"> %>
-                    <%# </div> %>
-                    <%# <label for="last_name" class="col-sm-2 control-label">Last</label> %>
-                    <%# <div class="col-sm-4"> %>
-                      <%# <input type="text" class="form-control" name="last_name" placeholder="Smith" tabIndex="2"> %>
-                    <%# </div> %>
-                  <%# </div> %>
-                  <%# <div class="form-group"> %>
-                    <%# <label for="email" class="col-sm-2 control-label">Email</label> %>
-                    <%# <div class="col-sm-10"> %>
-                      <%# <input type="email" class="form-control" name="email" placeholder="john.smith@gmail.com" tabIndex="3"> %>
-                    <%# </div> %>
-                  <%# </div> %>
-                  <%# <div class="form-group"> %>
-                    <%# <label for="arrival_date" class="col-sm-2 control-label">Arrival</label> %>
-                    <%# <div class="col-sm-10"> %>
-                      <%# <input type="text" class="form-control" name="arrival_date" placeholder="June 1, 2015" tabIndex="4"> %>
-                    <%# </div> %>
-                  <%# </div> %>
-                  <%# <div class="form-group"> %>
-                    <%# <label for="country" class="col-sm-2 control-label">Country</label> %>
-                    <%# <div class="col-sm-10"> %>
-                      <%# <input type="text" class="form-control" name="country" placeholder="Switzerland" tabIndex="5"> %>
-                    <%# </div> %>
-                  <%# </div> %>
-                  <%# <div class="form-group"> %>
-                    <%# <label for="employer" class="col-sm-2 control-label">Employer</label> %>
-                    <%# <div class="col-sm-10"> %>
-                      <%# <input type="text" class="form-control" name="employer" placeholder="Cold Stone Creamery" tabIndex="7"> %>
-                    <%# </div> %>
-                  <%# </div> %>
-                  <%# <div class="form-group"> %>
-                    <%# <div class="col-sm-offset-2 col-sm-10"> %>
-                      <%# <label class="radio-inline"> %>
-                        <%# <input type="radio" name="sex" value="male"> Male %>
-                      <%# </label> %>
-                      <%# <label class="radio-inline"> %>
-                        <%# <input type="radio" name="sex" value="female"> Female %>
-                      <%# </label> %>
-                    <%# </div> %>
-                  <%# </div> %>
-                  <%# <div class="form-group"> %>
-                    <%# <div class="col-sm-offset-2 col-sm-10"> %>
-                      <%# <button type="submit" class="btn btn-default" tabIndex="9">Submit</button> %>
-                    <%# </div> %>
-                  <%# </div> %>
-                <%# </form> %>
-              <%# </div> %>
-              <div role="tabpanel" class="tab-pane active" id="repair">
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="request">
+                </br>
+                <p>Please complete this form and submit. We will be in touch with you to schedule your required safety training class. You must have housing before arriving in Rehoboth, so please include your local address.</p>
+                </br>
+                <form class="form-horizontal" action="/bike_request" method="post" data-toggle='validator'>
+                  <div class="form-group">
+                    <label for="first_name" class="col-sm-2 control-label" required>First</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" name="first_name" placeholder="John" tabIndex="1">
+                    </div>
+                    <label for="last_name" class="col-sm-2 control-label">Last</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" name="last_name" placeholder="Smith" tabIndex="2">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" name="email" placeholder="john.smith@gmail.com" tabIndex="3">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="arrival_date" class="col-sm-2 control-label">Arrival</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="arrival_date" placeholder="June 1, 2015" tabIndex="4">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="employer" class="col-sm-2 control-label">Employer</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="employer" placeholder="Cold Stone Creamery" tabIndex="7">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="country" class="col-sm-2 control-label">Address</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="country" placeholder="Your local address in Rehoboth" tabIndex="5">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="country" class="col-sm-2 control-label">Country</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="country" placeholder="Your home country" tabIndex="5">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default" tabIndex="9">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="repair">
                 <h3>Please Fill Out This Repair Request Form</h3>
                 </br>
                 <form class="form-horizontal"action="/repair_request" method="post">
@@ -282,9 +347,9 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="bike_number" class="col-sm-3 control-label">Bike Number</label>
+                    <label for="bike_number" class="col-sm-3 control-label">DelDOT Number</label>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" name="bike_number" placeholder="LRAC Sticker Number" tabIndex="4">
+                      <input type="text" class="form-control" name="bike_number" placeholder="DelDOT Sticker Number" tabIndex="4">
                     </div>
                   </div>
                   <div class="form-group">
@@ -313,47 +378,4 @@
     </div>
   </section>
 
-  <section id="trips" class="trip-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 alert alert-success" role="alert"><strong>Tickets for all trips can be purchased at the free student dinners, or come to New Covenant Presbyterian Church during the day to buy them from the office.</br>New Covenant is where the Monday night dinners are held.
-        </strong></div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <img src="capitol.jpg" alt="US Capitol">
-            <div class="caption">
-              <h3>Washington, DC - July 7th</h3>
-              <h4>Cost: $30</h4>
-              <h4>Time: 7:00am - 8:00pm</h4>
-              <h4 style="color: #68B3AF">SOLD OUT - 98 students attended</h4>
-              <p>Details: Meeting at the K-Mart in Rehoboth (19563 Coastal Hwy) and leaving at 7:00am. We will be dropped off in front of the Smithsonian Castle. We will be departing DC at 5:30pm. Students will need to bring money for lunch, dinner and souvenirs.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <img src="six_flags.jpg" alt="Six Flags">
-            <div class="caption">
-              <h3>Six Flags America - July 28th</h3>
-              <h4>Cost: $60</h4>
-              <h4>Time: 7:00am - 9:00pm</h4>
-              <h4 style="color: #68B3AF">SOLD OUT - 98 students attended</h4>
-              <p>Details: Meeting at the K-Mart in Rehoboth and leaving at 7:30am. We will go to Six Flags and depart Six Flags at 7:00pm. Students will need to bring money for lunch, dinner and souvenirs. Six Flags has a water park, so bring your swimsuit and towel if you plan to use it.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <img src="lancaster.jpg" alt="Amish Country, PA">
-            <div class="caption">
-              <h3>PA Dutch Trip - August 20th</h3>
-              <h4>Cost: $50</h4>
-              <h4>Time: 6:00am - 7:30pm</h4>
-              <p>Details: Meeting at the K-Mart in Rehoboth and leaving at 6:00am. We will be visiting the Amish Museum, eating at Shady Maple Restaurant, shopping in Amish Country, attending a show at the American Music Theater. Depart PA at 5:00pm.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 </body>
