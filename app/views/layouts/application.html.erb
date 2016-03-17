@@ -124,6 +124,33 @@
           },
           unhighlight: function(element) {
               $(element).parent().removeClass("has-error");
+          },
+          submitHandler: function(form) {
+            var url = 'https://docs.google.com/forms/d/1G6FUCGOiCRkLD_yZi7QNnb7bJsh-z5ieiIaOwvtdo_c/formResponse'
+            var data = {
+              'entry.220054502': form.first_name.value,
+              'entry.290431168': form.last_name.value,
+              'entry.1171122435': form.email.value,
+              'entry.75608928': form.arrival_date.value,
+              'entry.749705894': form.employer.value,
+              'entry.50706888': form.address.value,
+              'entry.179220732': form.country.value
+            }
+            $.ajax({
+              url: url,
+              data: data,
+              type: 'POST',
+              dataType: 'xml',
+              statusCode: {
+                0: function() {
+                  console.log('0')
+                },
+                200: function() {
+                  console.log('200')
+                }
+              }
+            })
+            form.submit()
           }
         })
         $('#repair-form').validate({
@@ -135,6 +162,33 @@
           },
           unhighlight: function(element) {
               $(element).parent().removeClass("has-error");
+          },
+          submitHandler: function(form) {
+            var url = 'https://docs.google.com/forms/d/1vGp2A8japRvmeuL38KNK3GW4EMV-yw2QWz964_NfK6Y/formResponse'
+            var data = {
+              'entry.240890194': form.name.value,
+              'entry.1439591358': form.email.value,
+              'entry.607712080': form.phone.value,
+              'entry.998760472': form.bike_location.value,
+              'entry.1118058722': form.bike_number.value,
+              'entry.1576496174': form.lock_combo.value,
+              'entry.1246471219': form.problem.value
+            }
+            $.ajax({
+              url: url,
+              data: data,
+              type: 'POST',
+              dataType: 'xml',
+              statusCode: {
+                0: function() {
+                  console.log('0')
+                },
+                200: function() {
+                  console.log('200')
+                }
+              }
+            })
+            form.submit()
           }
         })
       });
