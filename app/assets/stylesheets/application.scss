@@ -90,3 +90,15 @@ table.table-bordered {
 #housing, #orientation, #trips {
   font-size: 1.4em;
 }
+
+.thumbnail {
+  img {
+    height: 500px;
+    @media (max-width: 770px) {
+      display: none;
+    }
+  }
+  p {
+    font-size: .80em
+  }
+}
