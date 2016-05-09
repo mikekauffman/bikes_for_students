@@ -29,5 +29,27 @@ class GoogleDoc
       }
       RestClient.post url, data, :content_type => :xml
     end
+
+    def orientation_sign_up(params)
+      form_id = params['form']
+      email = params['email']
+      urls = {
+        '1' => 'https://docs.google.com/forms/d/1PDamJq8f_9n37kpSdJgUL9sKWejh8KTqiShpVnfw3p4/formResponse',
+        '2' => 'https://docs.google.com/forms/d/1odbnD6TGKrvMWsdYEx5zvlBObocP4BDXyB3WO7tl-7c/formResponse',
+        '3' => 'https://docs.google.com/forms/d/1MqTlurj4qRlpZqzne8f1Wu50_R25ifPtVDJYE3r2H-I/formResponse'
+      }
+      inputs = {
+        '1' => 'entry.724033099',
+        '2' => 'entry.28786248',
+        '3' => 'entry.983224772'
+      }
+
+      url = urls[form_id]
+      data = {
+        inputs[form_id] => email
+      }
+
+      RestClient.post url, data, :content_type => :xml
+    end
   end
 end

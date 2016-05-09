@@ -30,6 +30,11 @@ class PagesController < ApplicationController
     redirect_to :root
   end
 
+  def orientation
+    GoogleDoc.orientation_sign_up(prune(params))
+    redirect_to :root
+  end
+
   def admin
     if logged_in?
       @emails = Newsletter.pluck(:email).uniq.reject(&:empty?)

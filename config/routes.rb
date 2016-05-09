@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   post 'newsletter' => 'pages#newsletter'
   post 'bike_request' => 'pages#bike_request'
   post 'repair_request' => 'pages#repair_request'
+  post 'orientation' => 'pages#orientation'
   post 'login' => 'pages#auth'
 
   get 'admin' => 'pages#admin'
