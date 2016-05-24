@@ -35,6 +35,21 @@ class PagesController < ApplicationController
     redirect_to :root
   end
 
+  def take_home_student
+    GoogleDoc.take_home_student(prune(params))
+    redirect_to :root
+  end
+
+  def take_home_resident
+    GoogleDoc.take_home_resident(prune(params))
+    redirect_to :root
+  end
+
+  def shorebirds
+    GoogleDoc.shorebirds(prune(params))
+    redirect_to :root
+  end
+
   def admin
     if logged_in?
       @emails = Newsletter.pluck(:email).uniq.reject(&:empty?)

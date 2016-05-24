@@ -92,6 +92,32 @@ h1 {
     }
 }
 
+.take_home-section {
+    min-height: 50%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 100px;
+    text-align: center;
+    background: #eee;
+    padding: 100px 0;
+    @media (max-width: 770px) {
+      padding: 75px 0;
+    }
+}
+
+.transportation-section {
+    min-height: 50%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 100px;
+    text-align: center;
+    background: #fff;
+    padding: 100px 0;
+    @media (max-width: 770px) {
+      padding: 75px 0;
+    }
+}
+
 .trip-section {
     min-height: 50%;
     padding-top: 150px;

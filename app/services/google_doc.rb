@@ -51,5 +51,34 @@ class GoogleDoc
 
       RestClient.post url, data, :content_type => :xml
     end
+
+    def take_home_student(params)
+      url = 'https://docs.google.com/forms/d/1wHJa6kWOz0h9WOKQf8dbEwR8Cha_LBAgsqDDCrlrkLg/formResponse'
+      data = {
+        'entry.1541884923': params['name'],
+        'entry.38679319': params['country'],
+        'entry.609453791': params['email'],
+        'entry.1557739720': params['friend_1'],
+        'entry.1195203998': params['friend_2'],
+      }
+      RestClient.post url, data, :content_type => :xml
+    end
+
+    def take_home_resident(params)
+      url = 'https://docs.google.com/forms/d/1ucY_F_Rnf4egcYbOqukPqhorFysrMmvahg05-kXfeVs/formResponse'
+      data = {
+        'entry.1661805248': params['name'],
+        'entry.1496136801': params['email'],
+      }
+      RestClient.post url, data, :content_type => :xml
+    end
+
+    def shorebirds(params)
+      url = 'https://docs.google.com/forms/d/14IB-FnhZyULKX9JmMr35xv2qnODxDmUIkxbWt8rsypY/formResponse'
+      data = {
+        'entry.245847006': params['email'],
+      }
+      RestClient.post url, data, :content_type => :xml
+    end
   end
 end

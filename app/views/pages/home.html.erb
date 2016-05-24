@@ -21,13 +21,19 @@
             <a class="page-scroll" href="#housing">Housing</a>
           </li>
           <li>
-            <a class="page-scroll" href="#orientation">Orientation Program</a>
+            <a class="page-scroll" href="#orientation">Orientation</a>
           </li>
           <li>
             <a class="page-scroll" href="#dinners">Free Dinners</a>
           </li>
           <li>
-            <a class="page-scroll" href="#trips">Cultural Exchange Events & Trips</a>
+            <a class="page-scroll" href="#take_home">Take a Student Home for Dinner</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#transportation">Transportation</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#trips">Trips & Events</a>
           </li>
           <li>
             <a class="page-scroll" href="#bikes">Bikes</a>
@@ -38,9 +44,12 @@
   </nav>
 
   <section id="intro" class="intro-section">
-    <%# <div class="hero-image"></div> %>
+    <%# <div class="hero-image"> %>
+    <%# </div> %>
     <div class="container">
       <div class="col-lg-12">
+        <img class='isop_logo' src='isop_logo.jpg'/>
+        <br/>
         <% @welcome_languages.each do |lang| %>
           <div class="welcome-text"><%= lang %></div>
         <% end %>
@@ -244,6 +253,76 @@ This website will give you information about the International Student Outreach 
     </div>
   </div>
 
+  <div id="take_home" class="take_home-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <h1 class="text-center">Take a Student Home for Dinner</h1>
+          <img src='friends.jpg'/>
+          <h2>J-1 Students</h2>
+          <p>If you would like to be invited to dinner at the home of local residents, we have residents who would like to host you. You can bring along a friend or two, just tell us your name and the name of the person(s) you will be bringing with you. Please sign up with your name, home country, and email and we will match you with a resident who would like to invite you to dinner.</p>
+          <form class="form-inline" action="/take_home_student" method="post">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" placeholder="John Smith">
+            <label for="country">Home County</label>
+            <input type="text" class="form-control" name="country" placeholder="Estonia">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" placeholder="john.smith@gmail.com">
+            </br>
+            <label for="friend_1">Friend's Name</label>
+            <input type="text" class="form-control" name="friend_1" placeholder="James Jones">
+            <label for="friend_2">Friend's Name</label>
+            <input type="text" class="form-control" name="friend_2" placeholder="Nick Peters">
+            <button type="submit" class="btn btn-default">Sign Up</button>
+          </form>
+          </br>
+          <h2>Residents of Rehoboth, Dewey and Lewes</h2>
+          <p>If you would like to host a J1 Visa student and a friend or two for dinner at your home, please sign up with your name and email. We will then forward you the name and email of a student and you can make arrangements with the student for dinner.</p>
+          <form class="form-inline" action="/take_home_resident" method="POST">
+            <label for="name">Name</label>
+            <input type="name" class="form-control" id="name" name="name" placeholder="John Smith">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="john.smith@gmail.com">
+            <button type="submit" class="btn btn-default">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="transportation" class="transportation-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <h1 class="text-center">Transportation from the Airport to Rehoboth</h1>
+          <h4>Each of these companies provides shuttle service from the airports to Rehoboth.</h4>
+          <h4>Contact them to make arrangements.</h4>
+          </br>
+          <div>
+            <h4>
+              BG Island:
+              <a href='http://bgisland.net/Airport-Shuttle' target='_blank'>http://bgisland.net/Airport-Shuttle</a>
+            </h4>
+          </div>
+          </br>
+          <div>
+            <h4>
+              E Point Student Travel Center:
+              <a href='http://ocstudentcenter.com/airport-pick/' target='_blank'>http://ocstudentcenter.com/airport-pick/</a>
+            </h4>
+          </div>
+          </br>
+          <div>
+            <h4>
+              Resort Express:
+              <a href='http://www.resortexpress.org/' target='_blank'>http://www.resortexpress.org/</a>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <section id="trips" class="trip-section">
     <div class="container">
       <div class="row">
@@ -306,6 +385,36 @@ This website will give you information about the International Student Outreach 
             <%# </div> %>
           <%# </div> %>
         <%# </div> %>
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <h2 class="text-center">
+            Delmarva Shorebirds Baseball Game
+          </h2>
+
+          <p class='text-center'><a href='https://www.youtube.com/watch?v=CPw4C1xAkRU' target='_blank'>“Take Me Out to the Ballgame”</a>
+            <br/>
+            <br/>
+          <strong>Thursday, July 21</strong>
+          <br/>
+          <strong>Game begins 7:00 p.m.
+          <br/>Bus leaves K-Mart parking lot at 4:30 and returns about 10:30.</strong>
+          <br/>
+          <br/>This is your chance to see a favorite American sport. Watch the Delmarva Shorebirds play the Hickory Crawdads at Perdue Stadium in Salisbury, Maryland. Tickets available at church dinners. If you can't get to dinner, ask a friend to get a ticket for you.</br>If you have questions, email: <a href="mailto:mbgilly1@gmail.com">mbgilly1@gmail.com</a></p>
+          <form class="form-inline" action="/shorebirds" method="POST">
+            <input type="email" class="form-control" id="email" name="email" placeholder="john.smith@gmail.com">
+            <button type="submit" class="btn btn-default">Sign Up</button>
+          </form>
+          </br>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="thumbnail">
+            <img src="birds1.png" alt="Washington, DC">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="thumbnail">
+            <img src="birds2.png" alt="Washington, DC">
+          </div>
+        </div>
       </div>
     </div>
   </section>
