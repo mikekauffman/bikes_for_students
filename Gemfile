@@ -6,7 +6,9 @@ gem 'rails', '~> 4.2.1'
 gem 'active_model_serializers'
 gem 'bcrypt'
 gem 'pg'
-gem 'unicorn'
+platforms :ruby do # linux
+  gem 'unicorn'
+end
 gem 'tilt'
 gem "jquery-rails", "~> 2.3.0"
 gem 'bootstrap-sass', '~> 3.3.4'
