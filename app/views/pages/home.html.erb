@@ -102,6 +102,58 @@ This website will give you information about the International Student Outreach 
             <%# Fill out and submit the request form by <a href="#bikes">clicking here</a>. %>
           </p>
         </div>
+        <div role="tabpanel" class="tab-pane active" id="request">
+          </br>
+          <p>Please complete this form and submit. We will be in touch with you to schedule your required safety training class. You must have housing before arriving in Rehoboth, so please include your local address.</p>
+          </br>
+          <form class="form-horizontal" id="request-form" action="/bike_request" method="post" data-toggle='validator'>
+            <div class="form-group">
+              <label for="first_name" class="col-sm-1 control-label" required>First</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" name="first_name" placeholder="John" tabIndex="1">
+              </div>
+              <label for="last_name" class="col-sm-2 control-label">Last</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" name="last_name" placeholder="Smith" tabIndex="2">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="col-sm-1 control-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" name="email" placeholder="john.smith@gmail.com" tabIndex="3">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="arrival_date" class="col-sm-1 control-label">Arrival</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="arrival_date" placeholder="June 1, 2016" tabIndex="4">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="employer" class="col-sm-1 control-label">Employer</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="employer" placeholder="Cold Stone Creamery" tabIndex="7">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="country" class="col-sm-1 control-label">Address</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="address" placeholder="Your local address in Rehoboth" tabIndex="5" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="country" class="col-sm-1 control-label">Country</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="country" placeholder="Your home country" tabIndex="5">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-1 col-sm-10">
+                <button type="submit" class="btn btn-default" tabIndex="9">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -213,7 +265,7 @@ This website will give you information about the International Student Outreach 
             <a target="_blank" href="https://maps.google.com/maps?daddr=3072 Savannah E Dr, Lewes, DE&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a>
             </p>
             <p>(302) 644 - 6800</p>
-            <p>(June 6 - Aug 29)</p>
+            <p>(May 29 - Sept 4)</p>
           </td>
           <td>
             <p>5:30 - 7:30 PM</p>
@@ -222,7 +274,7 @@ This website will give you information about the International Student Outreach 
             <a target="_blank" href="https://maps.google.com/maps?daddr=19285 Holland Glade Road, Rehoboth Beach&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a>
             </p>
             <p>(302) 227 - 7743</p>
-            <p>(May 31 - Sept 6)</p>
+            <p>(May 30 - Sept 5)</p>
           </td>
           <td>
             <p>5:30 - 7:30 PM </p>
@@ -231,7 +283,7 @@ This website will give you information about the International Student Outreach 
             <a target="_blank" href="https://maps.google.com/maps?daddr=409 King Charles Ave, Rehoboth Beach&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a>
             </p>
             <p>(302) 227 - 4550</p>
-            <p>(June 1 - Aug 31)</p>
+            <p>(May 31 - Aug 30)</p>
           </td>
           <td>
             <p>5:30 - 7:30 PM</p>
@@ -240,7 +292,7 @@ This website will give you information about the International Student Outreach 
             <a target="_blank" href="https://maps.google.com/maps?daddr=20276 Bay Vista Rd, Rehoboth Beach&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a>
             </p>
             <p>(302) 227 - 3066</p>
-            <p>(June 2 - Sept 1)</p>
+            <p>(June 1 - Aug 31)</p>
           </td>
           <td></td>
           <td></td>
@@ -251,7 +303,7 @@ This website will give you information about the International Student Outreach 
             <a target="_blank" href="https://maps.google.com/maps?daddr=19285 Holland Glade Road, Rehoboth Beach&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a>
             </p>
             <p>(302) 227 - 7743</p>
-            <p>(June 5 - Sept 4)</p>
+            <p>(June 4 - Sept 3)</p>
           </td>
         </tr>
       </table>
@@ -331,57 +383,57 @@ This website will give you information about the International Student Outreach 
     </div>
   </div>
 
-  <%# <section id="trips" class="trip-section"> %>
-    <%# <div class="container"> %>
-      <%# <div class="row"> %>
-        <%# <div class="col-xs-12 col-md-10 col-md-offset-1"> %>
-          <%# <h2 class="text-center"> %>
-            <%# 2016 International Student Outreach Program Annual Bus Trips %>
-          <%# </h2> %>
+  <section id="trips" class="trip-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <h2 class="text-center">
+            2016 International Student Outreach Program Annual Bus Trips
+          </h2>
 
-          <%# <p>This year we are having four bus trips with the potential for a fifth based on student interest. The two scheduled are %>
-          <%# <br/> %>
-          <%# <strong>(1) July 13th to  our nation’s capital, Washington, D. C. </strong> %>
-          <%# <br/> %>
-          <%# <strong>(2) August 18th to  the historic area in Philadelphia, Pennsylvania.</strong> %>
-          <%# <br/>These trips provide a wonderful opportunity to learn about our history, visit interesting museums, and see unique architecture both old and new.  Each trip will take about 2 1/2 -3 hours by bus from the K Mart parking lot in Rehoboth to each  destination. <b>Bus will leave K Mart at 7:00 a.m. and return about 9:30 p.m.</b> Each trip will cost $30 and the fee is not refundable. Please set aside these dates in your schedule with your employers so you can get off work and attend these trips.  Tickets will be on sale at the church dinners. If you can't get to a dinner, ask a friend to buy one for you. </br> Get your tickets early, as space is limited. We look forward to your participation. </br>If you have questions, email: <a href="mailto:centralguy1229@gmail.com">centralguy1229@gmail.com</a></p> %>
+          <p>This year we are having four bus trips with the potential for a fifth based on student interest. The two scheduled are
+          <br/>
+          <strong>(1) June 27th and August 3rd to  our nation’s capital, Washington, D. C. </strong>
+          <br/>
+          <strong>(2) July 12th and August 15th to the historic area in Philadelphia, Pennsylvania.</strong>
+          <br/>These trips provide a wonderful opportunity to learn about our history, visit interesting museums, and see unique architecture both old and new.  Each trip will take about 2 1/2 -3 hours by bus from the K Mart parking lot in Rehoboth to each  destination. <b>Bus will leave K Mart at 7:00 a.m. and return about 9:30 p.m.</b> Each trip will cost $30 and the fee is not refundable. Please set aside these dates in your schedule with your employers so you can get off work and attend these trips. </br><b>Tickets will be on sale at the church dinners, or at the Rehoboth Beach Visitor Center (501 Rehoboth Avenue) Mon - Fri 9am - 1pm</b></br> Get your tickets early, as space is limited. We look forward to your participation. </br>If you have questions, email: <a href="mailto:centralguy1229@gmail.com">centralguy1229@gmail.com</a></p>
 
-        <%# </div> %>
-        <%# <div class="col-xs-12 col-md-6"> %>
-          <%# <div class="thumbnail"> %>
-            <%# <img src="DC.png" alt="Washington, DC"> %>
-            <%# <div class="caption"> %>
-              <%# <h3>Washington, DC - July 13th</h3> %>
-              <%# <h4>Cost: $30</h4> %>
-              <%# <h4>Time: 7:00am - 9:30pm</h4> %>
-              <%# [> <h4 style="color: #68B3AF">SOLD OUT - 98 students attended</h4> <] %>
-              <%# <p> %>
-              <%# On the trip to Washington, D.C, our bus(s) will drop students off at the National Mall.  This will provide an opportunity to walk to several wonderful free museums including: the National Museum of Natural History, the National Museum of American History, the National Air and Space Museum, the Smithsonian American Art Museum, the National Museum of the American Indian, the Hirshorn (Art) Museum, the National Portrait Gallery and American Art Museum.  It is also be possible  to walk near the following buildings and monuments:  the  U. S. Capitol, the Supreme Court, the Lincoln and Jefferson Memorials, and  the Washington Monument.  Public restrooms are available in most facilities and many have cafeterias where you can buy food and drinks.  Note that every public museum has security measures in place and bags and backpacks will be checked. %>
-              <%# <br/> %>
-              <%# <br/> %>
-              <%# Access map below using this <a href="https://www.nps.gov/nama/planyourvisit/upload/NAMAWayfindingMapLarge.pdf" target="_blank">link</a>. %>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="thumbnail">
+            <img src="DC.png" alt="Washington, DC">
+            <div class="caption">
+              <h3>Washington, DC - June 27th and August 3rd</h3>
+              <h4>Cost: $30</h4>
+              <h4>Time: 7:00am - 9:30pm</h4>
+              <%# <h4 style="color: #68B3AF">SOLD OUT - 98 students attended</h4> %>
+              <p>
+              On the trip to Washington, D.C, our bus(s) will drop students off at the National Mall.  This will provide an opportunity to walk to several wonderful free museums including: the National Museum of Natural History, the National Museum of American History, the National Air and Space Museum, the Smithsonian American Art Museum, the National Museum of the American Indian, the Hirshorn (Art) Museum, the National Portrait Gallery and American Art Museum.  It is also be possible  to walk near the following buildings and monuments:  the  U. S. Capitol, the Supreme Court, the Lincoln and Jefferson Memorials, and  the Washington Monument.  Public restrooms are available in most facilities and many have cafeterias where you can buy food and drinks.  Note that every public museum has security measures in place and bags and backpacks will be checked.
+              <br/>
+              <br/>
+              Access map below using this <a href="https://www.nps.gov/nama/planyourvisit/upload/NAMAWayfindingMapLarge.pdf" target="_blank">link</a>.
 
-              <%# </p> %>
-            <%# </div> %>
-          <%# </div> %>
-        <%# </div> %>
-        <%# <div class="col-xs-12 col-md-6"> %>
-          <%# <div class="thumbnail"> %>
-            <%# <img src="Philly.png" alt="Philadelphia"> %>
-            <%# <div class="caption"> %>
-              <%# <h3>Philadelphia, PA - August 18th</h3> %>
-              <%# <h4>Cost: $30</h4> %>
-              <%# <h4>Time: 7:00am - 9:30pm</h4> %>
-              <%# [> <h4 style="color: #68B3AF">SOLD OUT - 98 students attended</h4> <] %>
-              <%# <p> %>
-                <%# On the trip to Philadelphia, our bus(s) will drop you off in the Independence National Historical Park.  This is considered the birthplace of our country and America’s most historic square mile.  Places to visit and enjoy include: Independence Hall, the Liberty Bell Center, the President’s House, the Independence Visitor Center, the Free Quaker Meeting House, the National Constitution Center, the Christ Church Burial Ground, the U. S. Mint.  Other places and facilities to enjoy include:  Society Hill and Penn’s Landing, the Franklin Institute, and the Philadelphia Museum of Art. %>
-              <%# <br/> %>
-              <%# <br/> %>
-              <%# Access map below included in brochure using this <a href="http://www.theconstitutional.com/sites/www.theconstitutional.com/files/ConstitutionalFull.pdf" target="_blank">link</a>. %>
-              <%# </p> %>
-            <%# </div> %>
-          <%# </div> %>
-        <%# </div> %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="thumbnail">
+            <img src="Philly.png" alt="Philadelphia">
+            <div class="caption">
+              <h3>Philadelphia, PA - June 12th and August 15th</h3>
+              <h4>Cost: $30</h4>
+              <h4>Time: 7:00am - 9:30pm</h4>
+              <%# <h4 style="color: #68B3AF">SOLD OUT - 98 students attended</h4> %>
+              <p>
+                On the trip to Philadelphia, our bus(s) will drop you off in the Independence National Historical Park.  This is considered the birthplace of our country and America’s most historic square mile.  Places to visit and enjoy include: Independence Hall, the Liberty Bell Center, the President’s House, the Independence Visitor Center, the Free Quaker Meeting House, the National Constitution Center, the Christ Church Burial Ground, the U. S. Mint.  Other places and facilities to enjoy include:  Society Hill and Penn’s Landing, the Franklin Institute, and the Philadelphia Museum of Art.
+              <br/>
+              <br/>
+              Access map below included in brochure using this <a href="http://www.theconstitutional.com/sites/www.theconstitutional.com/files/ConstitutionalFull.pdf" target="_blank">link</a>.
+              </p>
+            </div>
+          </div>
+        </div>
         <%# <div class="col-xs-12 col-sm-6 col-md-4"> %>
           <%# <div class="thumbnail"> %>
             <%# <img src="lancaster.jpg" alt="Amish Country, PA"> %>
@@ -424,24 +476,21 @@ This website will give you information about the International Student Outreach 
           <%# </div> %>
         <%# </div> %>
       <%# </div> %>
-    <%# </div> %>
-  <%# </section> %>
+    </div>
+  </section>
 
   <section id="bikes" class="bike-section">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 alert alert-warning" role="alert">
-          <h3>
-            A new bike request and registration form (as mentioned in the video) is coming soon.</br> Please check back soon.
-          </h3>
+        <%# <div class="col-xs-12 alert alert-warning" role="alert"> %>
           <%# <h4> %>
             <%# Please read the information under the Bike Program tab for suggestions on finding a bike, repairs, helmets and laws. %>
           <%# </h4> %>
-        </div>
+        <%# </div> %>
         <div class="info col-xs-12 col-md-6">
           <h1>Bike Program</h1>
           <p>
-          <strong>FINDING A BIKE:</strong> Check with your employer and landlord first. If they do not have a bike for you, the Delaware Department of Transportation (DelDOT) has 150 free bikes with proper lighting to loan students. Sign up to request a bicycle by filling out the <a href="#bikes">Bike Request Form</a>. You will be required to attend one safety information session in order to receive a bicycle. We will schedule you for a safety session and a bike when you fill out the form. Please understand that we will have more students than bikes. If DelDOT is not able to provide you with a bike, we recommend shopping for one at K-Mart, WalMart, or contacting the local thrift shops to see if they have any bikes for sale.
+          <strong>FINDING A BIKE:</strong> Check with your employer and landlord first. If they do not have a bike for you, the Delaware Department of Transportation (DelDOT) has 150 free bikes with proper lighting to loan students. Sign up to request a bicycle by filling out the <a href="#request">Registration/Bike Request Form</a> below the video. You will be required to attend one safety information session in order to receive a bicycle. We will schedule you for a safety session and a bike when you fill out the form. Please understand that we will have more students than bikes. If DelDOT is not able to provide you with a bike, we recommend shopping for one at K-Mart, WalMart, or contacting the local thrift shops to see if they have any bikes for sale.
           </p>
           <p>
           <strong>REPAIRS:</strong> Bicycle mechanics are usually available at the church dinners to repair all student bikes, or you can arrange for a repair by filling out the <a href="#bikes">Bike Repair Request form</a>.
@@ -450,71 +499,20 @@ This website will give you information about the International Student Outreach 
             <strong>LOCKS:</strong>  In order to get a free bike loaned to you, you must bring a bicycle lock with you to the safety session. Locks can be purchased at K-Mart or WalMart. DelDOT will try to have some locks for sale at the safety session, but purchasing one on your own is best. You must keep your bike locked at all times. Every year bikes are stolen. Don't lose yours!
           </p>
           <p>
-          <strong>SAFETY:</strong>  Helmets are highly recommended and will be given to everyone who gets a bike from DelDOT. Delaware offers free Bicycle Safety Checkpoints throughout the summer and free helmets are available at the checkpoints. <a href="2016_Bicycle_Safety_Checkpoint_Schedule.pdf">Click here to view 2016 Bicycle Safety Checkpoints</a>. If you need a helmet, please email <a href="mailto:bicycles4students@gmail.com">bicycles4students@gmail.com</a> and we will get one for you. We cannot over emphasize the need to wear a helmet. Coastal Highway has a lot of traffic and a lot of drivers who are on vacation and not familiar with the area. Serious accidents happen every summer and a helmet could save your life.
+          <strong>SAFETY:</strong>  Helmets are highly recommended and will be given to everyone who gets a bike from DelDOT. If you need a helmet, please email <a href="mailto:bicycles4students@gmail.com">bicycles4students@gmail.com</a> and we will get one for you. We cannot over emphasize the need to wear a helmet. Coastal Highway has a lot of traffic and a lot of drivers who are on vacation and not familiar with the area. Serious accidents happen every summer and a helmet could save your life.
           </p>
           <p>
-            <strong>BICYCLE LAWS:</strong> A bicycle is a vehicle and bicyclists must obey the same laws as drivers of other vehicles. Delaware State law requires the following of all bicyclists:  Bicyclists must obey all traffic laws including stopping at red lights and stop signs, as well as yielding at yield signs and to pedestrians; A bicycle must have a headlight in front and rear red reflector or rear light if ridden in low light conditions. DelDOT bikes come with lights, and free lights will be given out at some church dinners and the Bicycle Safety Checkpoints mentioned above. If you are stopped for riding a bike at night without lights, you will have to pay a fine. If you are riding on the street, you must ride on the right side of the street, in the same direction as traffic, not facing traffic. Bicycles are encouraged to ride on the sidewalks on either side of Coastal Highway, but bikes are not allowed on the sidewalks in the town of Rehoboth.
+            <strong>BICYCLE LAWS:</strong> A bicycle is a vehicle and bicyclists must obey the same laws as drivers of other vehicles. Delaware State law requires the following of all bicyclists:  Bicyclists must obey all traffic laws including stopping at red lights and stop signs, as well as yielding at yield signs and to pedestrians; A bicycle must have a headlight in front and rear red reflector or rear light if ridden in low light conditions. DelDOT bikes come with lights, and free lights will be given out at some church dinners. If you are stopped for riding a bike at night without lights, you will have to pay a fine. If you are riding on the street, you must ride on the right side of the street, in the same direction as traffic, not facing traffic. Bicycles are encouraged to ride on the sidewalks on either side of Coastal Highway, but bikes are not allowed on the sidewalks in the town of Rehoboth.
           </p>
         </div>
         <div class="col-xs-12 col-md-6">
           <div role="tabpanel">
-            <ul class="nav nav-tabs" id="bike-forms" role="tablist">
+            <%# <ul class="nav nav-tabs" id="bike-forms" role="tablist"> %>
               <%# <li role="presentation" class="col-xs-6 active"><a href="#request" aria-controls="request" role="tab" data-toggle="tab"><h2>Bike Wait List</h2></a></li> %>
-              <li role="presentation" class="col-xs-6 active"><a href="#repair" aria-controls="repair" role="tab" data-toggle="tab"><h2>Repairs</h2></a></li>
-            </ul>
+              <%# <li role="presentation" class="col-xs-6 active"><a href="#repair" aria-controls="repair" role="tab" data-toggle="tab"><h2>Repairs</h2></a></li> %>
+            <%# </ul> %>
             <div class="tab-content">
-              <%# <div role="tabpanel" class="tab-pane active" id="request"> %>
-                <%# </br> %>
-                <%# <p>Please complete this form and submit. We will be in touch with you to schedule your required safety training class. You must have housing before arriving in Rehoboth, so please include your local address.</p> %>
-                <%# </br> %>
-                <%# <form class="form-horizontal" id="request-form" action="/bike_request" method="post" data-toggle='validator'> %>
-                  <%# <div class="form-group"> %>
-                    <%# <label for="first_name" class="col-sm-2 control-label" required>First</label> %>
-                    <%# <div class="col-sm-4"> %>
-                      <%# <input type="text" class="form-control" name="first_name" placeholder="John" tabIndex="1"> %>
-                    <%# </div> %>
-                    <%# <label for="last_name" class="col-sm-2 control-label">Last</label> %>
-                    <%# <div class="col-sm-4"> %>
-                      <%# <input type="text" class="form-control" name="last_name" placeholder="Smith" tabIndex="2"> %>
-                    <%# </div> %>
-                  <%# </div> %>
-                  <%# <div class="form-group"> %>
-                    <%# <label for="email" class="col-sm-2 control-label">Email</label> %>
-                    <%# <div class="col-sm-10"> %>
-                      <%# <input type="email" class="form-control" name="email" placeholder="john.smith@gmail.com" tabIndex="3"> %>
-                    <%# </div> %>
-                  <%# </div> %>
-                  <%# <div class="form-group"> %>
-                    <%# <label for="arrival_date" class="col-sm-2 control-label">Arrival</label> %>
-                    <%# <div class="col-sm-10"> %>
-                      <%# <input type="text" class="form-control" name="arrival_date" placeholder="June 1, 2016" tabIndex="4"> %>
-                    <%# </div> %>
-                  <%# </div> %>
-                  <%# <div class="form-group"> %>
-                    <%# <label for="employer" class="col-sm-2 control-label">Employer</label> %>
-                    <%# <div class="col-sm-10"> %>
-                      <%# <input type="text" class="form-control" name="employer" placeholder="Cold Stone Creamery" tabIndex="7"> %>
-                    <%# </div> %>
-                  <%# </div> %>
-                  <%# <div class="form-group"> %>
-                    <%# <label for="country" class="col-sm-2 control-label">Address</label> %>
-                    <%# <div class="col-sm-10"> %>
-                      <%# <input type="text" class="form-control" name="address" placeholder="Your local address in Rehoboth" tabIndex="5" required> %>
-                    <%# </div> %>
-                  <%# </div> %>
-                  <%# <div class="form-group"> %>
-                    <%# <label for="country" class="col-sm-2 control-label">Country</label> %>
-                    <%# <div class="col-sm-10"> %>
-                      <%# <input type="text" class="form-control" name="country" placeholder="Your home country" tabIndex="5"> %>
-                    <%# </div> %>
-                  <%# </div> %>
-                  <%# <div class="form-group"> %>
-                    <%# <div class="col-sm-offset-2 col-sm-10"> %>
-                      <%# <button type="submit" class="btn btn-default" tabIndex="9">Submit</button> %>
-                    <%# </div> %>
-                  <%# </div> %>
-                <%# </form> %>
-              <%# </div> %>
+
               <div role="tabpanel" class="tab-pane active" id="repair">
                 <h3>Please Fill Out This Repair Request Form</h3>
                 </br>
