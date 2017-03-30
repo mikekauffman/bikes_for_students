@@ -104,7 +104,7 @@ This website will give you information about the International Student Outreach 
         </div>
         <div role="tabpanel" class="tab-pane active" id="request">
           </br>
-          <p>Please complete this form and submit. We will be in touch with you to schedule your required safety training class. You must have housing before arriving in Rehoboth, so please include your local address.</p>
+          <p class='main-text'>Please complete this registration/bike request form and submit. </p>
           </br>
           <form class="form-horizontal" id="request-form" action="/bike_request" method="post" data-toggle='validator'>
             <div class="form-group">
@@ -145,6 +145,42 @@ This website will give you information about the International Student Outreach 
               <label for="country" class="col-sm-1 control-label">Country</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control" name="country" placeholder="Your home country" tabIndex="5">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="sponsor" class="col-sm-1 control-label">Sponsor</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" name="sponsor" placeholder="Your sponsor organization" tabIndex="5">
+              </div>
+              <label for="major" class="col-sm-2 control-label">Area of Study</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" name="major" placeholder="Your academic area of study" tabIndex="5">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="been_to_de" class="col-sm-1 control-label">Have you been to Delaware?</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" name="been_to_de" placeholder="Yes/No" tabIndex="5">
+              </div>
+              <label for="needs_bike" class="col-sm-2 control-label">Do you need a bike?</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" name="needs_bike" placeholder="Yes/No" tabIndex="5">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="received_bike" class="col-sm-1 control-label">Have you received a bike from us before?</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="received_bike" placeholder="Yes/No" tabIndex="5">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="gender" class="col-sm-1 control-label">Gender</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" name="gender" placeholder="Male/Female" tabIndex="5">
+              </div>
+              <label for="height" class="col-sm-2 control-label">Height</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" name="height" placeholder="172cm" tabIndex="5">
               </div>
             </div>
             <div class="form-group">

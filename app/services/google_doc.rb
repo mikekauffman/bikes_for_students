@@ -11,7 +11,15 @@ class GoogleDoc
         'entry.75608928': params[:arrival_date],
         'entry.749705894': params[:employer],
         'entry.50706888': params[:address],
-        'entry.179220732': params[:country]
+        'entry.179220732': params[:country],
+        'entry.832785602': params[:sponsor],
+        'entry.304605585': params[:major],
+        'entry.1968912004': params[:been_to_de],
+        'entry.1289831634': params[:needs_bike],
+        'entry.186173074': params[:received_bike],
+        'entry.763580817': params[:gender],
+        'entry.1273807544': params[:height]
+
       }
       RestClient.post url, data, :content_type => :xml
     end
