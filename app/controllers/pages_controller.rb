@@ -20,13 +20,13 @@ class PagesController < ApplicationController
 
   def bike_request
     GoogleDoc.bike_request(params)
-    Notifier.bike_request(prune(params)).deliver_now
+    # Notifier.bike_request(prune(params)).deliver_now
     redirect_to :root
   end
 
   def repair_request
     GoogleDoc.repair_request(params)
-    Notifier.repair_request(prune(params)).deliver_now
+    # Notifier.repair_request(prune(params)).deliver_now
     redirect_to :root
   end
 
