@@ -220,10 +220,10 @@ This website will give you information about the International Student Outreach 
             You are invited and encouraged to attend one of the Orientation and Welcome sessions as soon as you arrive in the Rehoboth area, preferably before you start working. There will be three orientations - please attend the one closest to your arrival date.
             </br>
             </br>
-            <b>Orientations will be from 11:00 AM – 12:30 p.m.</b></br></br> Please indicate which orientation you will be attending by filling in the form below the chosen date and clicking 'Sign Up'. The session will include information about transportation, personal safety, banking, applying for your social security card, exciting trips and cultural events planned for you, and important information you'll need during your stay.
+            <b>Orientations will be from 11:00 AM – 12:30 PM</b></br></br> Please indicate which orientation you will be attending by filling in the form below the chosen date and clicking 'Sign Up'. The session will include information about transportation, personal safety, banking, applying for your social security card, exciting trips and cultural events planned for you, and important information you'll need during your stay.
             <br/>
             <br/>
-            If there is enough interest, we will try to arrange a bus to the Social Security Office after Orientations. The cost would be $10 for the round trip. If you are interested in this, click “Yes” on the sign up form.
+            If there is enough interest, we will try to arrange a bus to the Social Security Office after Orientations. The cost would be $10 for the round trip. <b>If you are interested in this, click “Yes” on the sign up form.</b>
             <br/>
             <br/>
             At orientation you will receive:
@@ -239,22 +239,109 @@ This website will give you information about the International Student Outreach 
           <tr>
             <th class="text-center">
               <h3>Friday, June 2</h3>
-              <form class="form-inline" action="/orientation?form=1" method="POST">
-                <input type="email" class="form-control" id="email" name="email" placeholder="john.smith@gmail.com">
+              <form action="/orientation?form=1" method="POST">
+                <div class="form-group">
+                  <label for="name" class="col-sm-4 control-label">Name</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name="name" placeholder="First/Last Name" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name" class="col-sm-4 control-label">Sponsor</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name="sponsor" placeholder="Sponsor's Name" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name" class="col-sm-4 control-label">Email</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name="email" placeholder="Email" required>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  Ride to Social Security?
+                </div>
+                <div class="form-group">
+                  <label class="radio-inline">
+                    <input type="radio" name="ride" value="yes">Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="ride" value="no">No
+                  </label>
+
+                </div>
                 <button type="submit" class="btn btn-default">Sign Up</button>
               </form>
             </th>
             <th class="text-center">
               <h3>Friday, June 16</h3>
-              <form class="form-inline" action="/orientation?form=2" method="POST">
-                <input type="email" class="form-control" id="email" name="email" placeholder="john.smith@gmail.com">
+              <form action="/orientation?form=2" method="POST">
+                <div class="form-group">
+                  <label for="name" class="col-sm-4 control-label">Name</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name="name" placeholder="First/Last Name" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name" class="col-sm-4 control-label">Sponsor</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name="sponsor" placeholder="Sponsor's Name" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name" class="col-sm-4 control-label">Email</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name="email" placeholder="Email" required>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  Ride to Social Security?
+                </div>
+                <div class="form-group">
+                  <label class="radio-inline">
+                    <input type="radio" name="ride" value="yes">Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="ride" value="no">No
+                  </label>
+
+                </div>
                 <button type="submit" class="btn btn-default">Sign Up</button>
               </form>
             </th>
             <th class="text-center">
               <h3>Thursday, June 29</h3>
-              <form class="form-inline" action="/orientation?form=3" method="POST">
-                <input type="email" class="form-control" id="email" name="email" placeholder="john.smith@gmail.com">
+              <form action="/orientation?form=3" method="POST">
+                <div class="form-group">
+                  <label for="name" class="col-sm-4 control-label">Name</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name="name" placeholder="First/Last Name" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name" class="col-sm-4 control-label">Sponsor</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name="sponsor" placeholder="Sponsor's Name" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name" class="col-sm-4 control-label">Email</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name="email" placeholder="Email" required>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  Ride to Social Security?
+                </div>
+                <div class="form-group">
+                  <label class="radio-inline">
+                    <input type="radio" name="ride" value="yes">Yes
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="ride" value="no">No
+                  </label>
+
+                </div>
                 <button type="submit" class="btn btn-default">Sign Up</button>
               </form>
             </th>
@@ -434,7 +521,7 @@ This website will give you information about the International Student Outreach 
       <div class="row">
         <div class="col-xs-12 col-md-10 col-md-offset-1">
           <h2 class="text-center">
-            2016 International Student Outreach Program Annual Bus Trips
+            2017 International Student Outreach Program Annual Bus Trips
           </h2>
 
           <p>This year we are having four bus trips with the potential for a fifth based on student interest. The two scheduled are

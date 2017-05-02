@@ -40,21 +40,43 @@ class GoogleDoc
 
     def orientation_sign_up(params)
       form_id = params['form']
+      name = params['name']
+      sponsor = params['sponsor']
       email = params['email']
-      urls = {
-        '1' => 'https://docs.google.com/forms/d/1PDamJq8f_9n37kpSdJgUL9sKWejh8KTqiShpVnfw3p4/formResponse',
-        '2' => 'https://docs.google.com/forms/d/1odbnD6TGKrvMWsdYEx5zvlBObocP4BDXyB3WO7tl-7c/formResponse',
-        '3' => 'https://docs.google.com/forms/d/1MqTlurj4qRlpZqzne8f1Wu50_R25ifPtVDJYE3r2H-I/formResponse'
-      }
-      inputs = {
-        '1' => 'entry.724033099',
-        '2' => 'entry.28786248',
-        '3' => 'entry.983224772'
+      ride = params['ride']
+
+      formConfig = {
+        '1' => {
+          url: 'https://docs.google.com/forms/d/1PDamJq8f_9n37kpSdJgUL9sKWejh8KTqiShpVnfw3p4/formResponse',
+          name: 'entry.724033099',
+          sponsor: 'entry.1517326090',
+          email: 'entry.1161828436',
+          ride: 'entry.359498300'
+        },
+        '2' => {
+          url: 'https://docs.google.com/forms/d/1odbnD6TGKrvMWsdYEx5zvlBObocP4BDXyB3WO7tl-7c/formResponse',
+          name: 'entry.28786248',
+          sponsor: 'entry.465685260',
+          email: 'entry.1756011234',
+          ride: 'entry.1254030292'
+        },
+        '3' => {
+          url: 'https://docs.google.com/forms/d/1MqTlurj4qRlpZqzne8f1Wu50_R25ifPtVDJYE3r2H-I/formResponse',
+          name: 'entry.983224772',
+          sponsor: 'entry.1921044449',
+          email: 'entry.524985918',
+          ride: 'entry.1986025925'
+        }
       }
 
-      url = urls[form_id]
+      form = formConfig[form_id]
+      url = form[:url]
+
       data = {
-        inputs[form_id] => email
+        form[:name] => name,
+        form[:sponsor] => sponsor,
+        form[:email] => email,
+        form[:ride] => ride
       }
 
       RestClient.post url, data, :content_type => :xml
