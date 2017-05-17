@@ -94,7 +94,7 @@ a {
   margin: 1.25% 1%;
   display: inline-block;
   font-weight: bolder;
-  font-size: 2em;
+  font-size: 1.75em;
   color: $orange;
   @media (max-width: 770px) {
     font-size: 1.5em;
@@ -132,5 +132,22 @@ table.table-bordered {
   }
   p {
     font-size: .80em
+  }
+}
+
+.bike-section {
+  .youtube-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
