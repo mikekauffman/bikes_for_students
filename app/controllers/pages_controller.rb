@@ -21,7 +21,7 @@ class PagesController < ApplicationController
   def bike_request
     GoogleDoc.bike_request(params)
     # Notifier.bike_request(prune(params)).deliver_now
-    redirect_to :root
+    render :bike_confirm
   end
 
   def repair_request

@@ -33,7 +33,10 @@
             <a class="page-scroll" href="#transportation">Transportation</a>
           </li>
           <li>
-            <a class="page-scroll" href="#trips">Trips & Events</a>
+            <a class="page-scroll" href="#trips">Trips</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#lunches">Free Lunches</a>
           </li>
           <li>
             <a class="page-scroll" href="#bikes">Bikes</a>
@@ -53,9 +56,9 @@
         <% @welcome_languages.each do |lang| %>
           <div class="welcome-text"><%= lang %></div>
         <% end %>
-        <div class='youtube-wrapper'>
-          <iframe class='youtube' src="https://www.youtube.com/embed/8STc1MHlSDk"></iframe>
-        </div>
+        <%# <div class='youtube-wrapper'> %>
+          <%# <iframe class='youtube' src="https://www.youtube.com/embed/8STc1MHlSDk"></iframe> %>
+        <%# </div> %>
         <%# <div class="callout"> %>
           <%# <h4> %>
             <%# The Mayor of Rehoboth Beach welcomes you to Rehoboth and would like you to join him for a free lunch on  %>
@@ -93,7 +96,7 @@
               <%# <button type="submit" class="btn btn-default">Submit</button> %>
             <%# </form> %>
             <br/>
-This website will give you information about the International Student Outreach Program, which provides a welcome orientation session for all students, free dinners every Monday through Thursday, local cultural exchange opportunities and exciting trips planned just for you!
+This website will give you information about the International Student Outreach Program, which provides a welcome orientation session for all students, free dinners every Monday through Thursday, local cultural exchange opportunities and exciting trips planned just for you! We also have 150 bikes to loan to students for free, but you must be among the first 150 to sign up on the registration/bike request form below. For more information about bikes, including free repairs all summer, free helmets and lights, please click on the bike tab.
             <br/>
             <br/>
             <%# The Delaware Department of Transportation has a limited number of free bicycles to give to students  who take the two-hour bicycle safety training session. %>
@@ -203,7 +206,11 @@ This website will give you information about the International Student Outreach 
           <p>
             Rehoboth Beach, Dewey Beach and Lewes are very popular vacation destinations. Because of this, affordable, convenient housing is extremely difficult to find.  You must arrange your housing before arriving in the U.S.  Do not plan to find housing once you arrive.
             </br>
+            </br>
             Your sponsor organization will require you to give them your Rehoboth area address before you leave your home country. Ask your sponsor for housing help, ask your employer for help, check craigslist.com, the local paper (Cape Gazette) or contact a realtor.
+            </br>
+            </br>
+            Ask your sponsor for housing help and ask your employer for help. Beware of housing scams. Check with your sponsor about housing you find on your own. Also, Bethany is 20 km from Rehoboth and you cannot live there and work here.
           </p>
         </div>
       </div>
@@ -220,10 +227,12 @@ This website will give you information about the International Student Outreach 
             You are invited and encouraged to attend one of the Orientation and Welcome sessions as soon as you arrive in the Rehoboth area, preferably before you start working. There will be three orientations - please attend the one closest to your arrival date.
             </br>
             </br>
-            <b>Orientations will be from 11:00 AM – 12:30 PM</b></br></br> Please indicate which orientation you will be attending by filling in the form below the chosen date and clicking 'Sign Up'. The session will include information about transportation, personal safety, banking, applying for your social security card, exciting trips and cultural events planned for you, and important information you'll need during your stay.
+            <b>Orientations will be from 11:00 AM – 1:00 PM</b></br></br> Please indicate which orientation you will be attending by filling in the form below the chosen date and clicking 'Sign Up'. The session will include information about transportation, personal safety, banking, applying for your social security card, exciting trips and cultural events planned for you, and important information you'll need during your stay.
             <br/>
             <br/>
             If there is enough interest, we will try to arrange a bus to the Social Security Office after Orientations. The cost would be $10 for the round trip. <b>If you are interested in this, click “Yes” on the sign up form.</b>
+            <br/>
+            You must have already registered with SEVIS before going to Social Security.
             <br/>
             <br/>
             At orientation you will receive:
@@ -238,7 +247,7 @@ This website will give you information about the International Student Outreach 
         <table class="table">
           <tr>
             <th class="text-center">
-              <h3>Friday, June 2</h3>
+              <h3>Thursday, May 31</h3>
               <form action="/orientation?form=1" method="POST">
                 <div class="form-group">
                   <label for="name" class="col-sm-4 control-label">Name</label>
@@ -274,7 +283,7 @@ This website will give you information about the International Student Outreach 
               </form>
             </th>
             <th class="text-center">
-              <h3>Friday, June 16</h3>
+              <h3>Friday, June 15</h3>
               <form action="/orientation?form=2" method="POST">
                 <div class="form-group">
                   <label for="name" class="col-sm-4 control-label">Name</label>
@@ -310,7 +319,7 @@ This website will give you information about the International Student Outreach 
               </form>
             </th>
             <th class="text-center">
-              <h3>Thursday, June 29</h3>
+              <h3>Thursday, June 28</h3>
               <form action="/orientation?form=3" method="POST">
                 <div class="form-group">
                   <label for="name" class="col-sm-4 control-label">Name</label>
@@ -349,19 +358,19 @@ This website will give you information about the International Student Outreach 
           <tr>
             <td>
               <p>11:00 AM - 12:30 PM</p>
-              <p>Atlantic Sands Hotel Conference Center</br>
-              101 N Boardwalk</br>
-              <a target="_blank" href="https://www.google.com/maps/dir//Atlantic+Sands+Hotel+%26+Conference+Center,+101+N+Boardwalk,+Rehoboth+Beach,+DE+19971/@38.717967,-75.0788232,17z/data=!4m15!1m6!3m5!1s0x89b8b66f1b14f35b:0x1e7380a1d621b281!2sAtlantic+Sands+Hotel+%26+Conference+Center!8m2!3d38.717967!4d-75.0766345!4m7!1m0!1m5!1m1!1s0x89b8b66f1b14f35b:0x1e7380a1d621b281!2m2!1d-75.0766345!2d38.717967">Get Directions</a>
+              <p>Lutheran Church of our Savior</br>
+              20276 Bay Vista Rd </br>
+              <a target="_blank" href="https://maps.google.com/maps?daddr=20276 Bay Vista Rd, Rehoboth Beach&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a>
               </p>
-              <p>(302) 227 - 2511</p>
+              <p>(302) 227 - 3066</p>
             </td>
             <td>
               <p>11:00 AM - 12:30 PM</p>
-              <p>Rusty Rudder Restaurant</br>
-              113 Dickinson St </br>
-              <a target="_blank" href="https://www.google.com/maps/dir//Rusty+Rudder,+113+Dickinson+St,+Dewey+Beach,+DE+19971/@38.690079,-75.0783337,17z/data=!4m15!1m6!3m5!1s0x0:0xc67f1151bc8571a1!2sRusty+Rudder!8m2!3d38.6900791!4d-75.0761448!4m7!1m0!1m5!1m1!1s0x89b8b61d6be0aa19:0xc67f1151bc8571a1!2m2!1d-75.076145!2d38.690079">Get Directions</a>
+              <p>Lutheran Church of our Savior</br>
+              20276 Bay Vista Rd </br>
+              <a target="_blank" href="https://maps.google.com/maps?daddr=20276 Bay Vista Rd, Rehoboth Beach&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a>
               </p>
-              <p>(302) 227 - 3888</p>
+              <p>(302) 227 - 3066</p>
             </td>
             <td>
               <p>11:00 AM - 12:30 PM</p>
@@ -392,13 +401,13 @@ This website will give you information about the International Student Outreach 
         </tr>
         <tr>
           <td>
-            <p>6:00 - 7:30 PM</p>
+            <p>6:00 - 8:00 PM</p>
             <p>New Covenant Church</br>
             3072 Savannah E Dr </br>
             <a target="_blank" href="https://maps.google.com/maps?daddr=3072 Savannah E Dr, Lewes, DE&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a>
             </p>
             <p>(302) 644 - 6800</p>
-            <p>(May 29 - Sept 4)</p>
+            <p>(May 28 - Sept 3)</p>
           </td>
           <td>
             <p>5:30 - 7:30 PM</p>
@@ -407,7 +416,7 @@ This website will give you information about the International Student Outreach 
             <a target="_blank" href="https://maps.google.com/maps?daddr=19285 Holland Glade Road, Rehoboth Beach&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a>
             </p>
             <p>(302) 227 - 7743</p>
-            <p>(May 30 - Sept 5)</p>
+            <p>(May 29 - Sept 4)</p>
           </td>
           <td>
             <p>5:30 - 7:30 PM </p>
@@ -416,7 +425,7 @@ This website will give you information about the International Student Outreach 
             <a target="_blank" href="https://maps.google.com/maps?daddr=409 King Charles Ave, Rehoboth Beach&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a>
             </p>
             <p>(302) 227 - 4550</p>
-            <p>(May 31 - Aug 30)</p>
+            <p>(May 30 - Aug 29)</p>
           </td>
           <td>
             <p>5:30 - 7:30 PM</p>
@@ -425,7 +434,9 @@ This website will give you information about the International Student Outreach 
             <a target="_blank" href="https://maps.google.com/maps?daddr=20276 Bay Vista Rd, Rehoboth Beach&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a>
             </p>
             <p>(302) 227 - 3066</p>
-            <p>(June 1 - Aug 31)</p>
+            <p>(May 31 - Aug 30)</br>
+            No Dinner July 5
+            </p>
           </td>
           <td></td>
           <td></td>
@@ -436,7 +447,7 @@ This website will give you information about the International Student Outreach 
             <a target="_blank" href="https://maps.google.com/maps?daddr=19285 Holland Glade Road, Rehoboth Beach&hl=en&sll=40.02931,-105.239977&sspn=0.154578,0.257149&t=h&gl=us&mra=ls&z=16">Get Directions</a>
             </p>
             <p>(302) 227 - 7743</p>
-            <p>(June 4 - Sept 3)</p>
+            <p>(June 3 - Sept 2)</p>
           </td>
         </tr>
       </table>
@@ -511,6 +522,22 @@ This website will give you information about the International Student Outreach 
               <a href='http://www.resortexpress.org/' target='_blank'>http://www.resortexpress.org/</a>
             </h4>
           </div>
+          <h1 class="text-center">Local Transportation in Rehoboth</h1>
+          <h4>
+            The DART bus system goes from Lewes to Rehoboth to Dewey and surrounding areas.
+            </br>
+            Website:
+            <a href='https://dartfirststate.com/information/routes/index.shtml/' target='_blank'>https://dartfirststate.com/information/routes/index.shtml/</a>
+          </h4>
+          <p>
+            Click on the tab for Sussex County. Route 206 and 215 will be convenient for most students.
+            </br>
+            Check the DART website often for updates to their seasonal beach bus service, which has increased hours and service in our area.
+            </br>
+            The bus is a safe, convenient alternative to biking on Coastal Highway. At this time, we are trying to arrange a reduced fare seasonal bus pass for students.  If we are able to accomplish this, we will contact all sponsors and ask them to share the bus information with you.
+            </br>
+            Buses have racks on the front for bicycles.
+          </p>
         </div>
       </div>
     </div>
@@ -520,25 +547,27 @@ This website will give you information about the International Student Outreach 
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-10 col-md-offset-1">
-          <h2 class="text-center">
-            2017 International Student Outreach Program Annual Bus Trips
-          </h2>
+          <h1 class="text-center">
+            2018 International Student Outreach Program Annual Bus Trips
+          </h1>
 
-          <p>This year we are having four bus trips with the potential for a fifth based on student interest. The two scheduled are
+          <p>This year we are having four bus trips.
           <br/>
-          <strong>(1) June 27th (August 3rd Sold Out) to  our nation’s capital, Washington, D. C. </strong>
           <br/>
-          <strong>(2) July 12th and August 15th to the historic area in Philadelphia, Pennsylvania.</strong>
-          <br/>These trips provide a wonderful opportunity to learn about our history, visit interesting museums, and see unique architecture both old and new.  Each trip will take about 2 1/2 -3 hours by bus from the K Mart parking lot in Rehoboth to each  destination. <b>Bus will leave K Mart at 7:00 a.m. and return about 9:30 p.m.</b> Each trip will cost $30 and the fee is not refundable. Please set aside these dates in your schedule with your employers so you can get off work and attend these trips. </br><b>Tickets will be on sale at the church dinners and at orientations.</b></br> Get your tickets early, as space is limited. We look forward to your participation. </br>If you have questions, email: <a href="mailto:centralguy1229@gmail.com">centralguy1229@gmail.com</a></p>
+          <strong>Thursday, July 12th and Tuesday, August 7th to  our nation’s capital, Washington, D. C. </strong>
+          <br/>
+          <strong>Wednesday July 25th and Thursday, August 23rd to the historic area in Philadelphia, Pennsylvania.</strong>
+          <br/>
+          <br/>These trips provide a wonderful opportunity to learn about our history, visit interesting museums, and see unique architecture both old and new.  Each trip will take about 2 1/2 -3 hours by bus from the K Mart parking lot in Rehoboth to each  destination. <b>Bus will leave K Mart at 7:00 a.m. and return about 9:30 p.m.</b> Each trip will cost $25 and the fee is not refundable. Please set aside these dates in your schedule with your employers so you can get off work and attend these trips. </br><b>Tickets will be on sale at the church dinners at orientations, and at the DelDOT Bicycle Garage located in the park and ride lot.  See bike tab for directions and hours for the DelDOT Bicycle Garage.</b></br> Get your tickets early, as space is limited. We look forward to your participation. </br>If you have questions, email: <a href="mailto:centralguy1229@gmail.com">centralguy1229@gmail.com</a></p>
 
         </div>
         <div class="col-xs-12 col-md-6">
           <div class="thumbnail">
             <img src="DC.png" alt="Washington, DC">
             <div class="caption">
-              <h3>Washington, DC - June 27th</h3>
-              <h4 style="color: #68B3AF">August 3rd is SOLD OUT</h4>
-              <h4>Cost: $30</h4>
+              <h3>Washington, DC - July 12th and August 7th</h3>
+              <%# <h4 style="color: #68B3AF">August 3rd is SOLD OUT</h4> %>
+              <h4>Cost: $25</h4>
               <h4>Time: 7:00am - 9:30pm</h4>
               <p>
               On the trip to Washington, D.C, our bus(s) will drop students off at the National Mall.  This will provide an opportunity to walk to several wonderful free museums including: the National Museum of Natural History, the National Museum of American History, the National Air and Space Museum, the Smithsonian American Art Museum, the National Museum of the American Indian, the Hirshorn (Art) Museum, the National Portrait Gallery and American Art Museum.  It is also be possible  to walk near the following buildings and monuments:  the  U. S. Capitol, the Supreme Court, the Lincoln and Jefferson Memorials, and  the Washington Monument.  Public restrooms are available in most facilities and many have cafeterias where you can buy food and drinks.  Note that every public museum has security measures in place and bags and backpacks will be checked.
@@ -554,8 +583,8 @@ This website will give you information about the International Student Outreach 
           <div class="thumbnail">
             <img src="Philly.png" alt="Philadelphia">
             <div class="caption">
-              <h3>Philadelphia, PA - July 12th and August 15th</h3>
-              <h4>Cost: $30</h4>
+              <h3>Philadelphia, PA - July 25th and August 23rd</h3>
+              <h4>Cost: $25</h4>
               <h4>Time: 7:00am - 9:30pm</h4>
               <%# <h4 style="color: #68B3AF">SOLD OUT - 98 students attended</h4> %>
               <p>
@@ -612,6 +641,35 @@ This website will give you information about the International Student Outreach 
     </div>
   </section>
 
+  <div id="lunches" class="lunches-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <h1 class="text-center">Free Lunches</h1>
+          <h3>
+            All students are invited to free Grab-And-Go lunches on
+            </br>
+            <strong>Friday, July 13 and Friday, August 17 from 11:30 a.m. to 1:30 p.m.</strong>
+            </br>
+            The lunch will be in a bag, ready for you to take back to work, to the beach, or wherever you want!
+          </h3>
+          </br>
+          <p>
+          Pick up your lunch at the Village Improvement Association clubhouse.
+          </br>
+          It is just off the boardwalk between Lake Avenue and Grenoble Place. It's a green building. The front faces the boardwalk, behind some tall grass, the back has a fenced in parking lot with an entrance door. This is at the north end of the boardwalk.
+          </p>
+          </br>
+          </br>
+          </br>
+          </br>
+          </br>
+          </br>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <section id="bikes" class="bike-section">
     <div class="container">
       <div class="row">
@@ -620,91 +678,150 @@ This website will give you information about the International Student Outreach 
             <%# Please read the information under the Bike Program tab for suggestions on finding a bike, repairs, helmets and laws. %>
           <%# </h4> %>
         <%# </div> %>
-        <div class="info col-xs-12 col-md-6">
+        <div class="info col-xs-12">
           <h1>Bike Program</h1>
+          <strong>FINDING A BIKE:</strong>
+          <ul>
+            <li>
+              <p>
+              The Delaware Department of Transportation (DelDOT) has 150 free bikes with proper lighting to loan students.
+              </p>
+            </li>
+            <li>
+              <p>
+              Sign up to request a bicycle by filling out the <a href="#request">Registration/Bike Request Form</a> at the top of the website.
+              </p>
+            </li>
+            <li>
+              <p>
+              You will be required to attend one safety information session in order to receive a bicycle. We will schedule you for a safety session based on your arrival date.
+              </p>
+            </li>
+            <li>
+              <p>
+              Please understand that we will have more students than bikes.
+              </p>
+            </li>
+            <li>
+              <p>
+              If DelDOT is not able to provide you with a bike, we recommend shopping for one at WalMart, asking your landlord or employer if they have a bike for you, or contacting the local thrift shops to see if they have any bikes for sale. Also, consider using the bus.
+              </p>
+            </li>
+          </ul>
+          <strong>REPAIRS:</strong>
+          <ul>
+            <li>
+              <p>
+              Free repairs are available to all J1 students, even if you are not riding a DelDOT bike.
+              </p>
+            </li>
+            <li>
+              <p>
+              Mechanics will be available to make repairs on Mondays and Fridays from 9 AM to 11 AM and  Wednesdays from 3 PM to 5 PM. Repairs will begin May 21 until September  7.
+              </p>
+            </li>
+            <li>
+              <p>
+              All repairs will be made at the DelDOT Bicycle Garage which is located in the Rehoboth Park and Ride lot, located off Shuttle Road near the intersection of Coastal Highway and Rehoboth Avenue. Look for the DelDOT Bicycle Garage sign on the white barn in the corner.  There is an entrance to the Park and Ride lot off Shuttle Road for cars/bikes and entrances for pedestrians/bikes around the lot, including directly behind Fresh Market. (See pin on map above showing dinner locations.)
+              </p>
+            </li>
+            <li>
+              <p>
+              If you cannot ride your bike, you can take it with you on the DART bus. DART buses go to the Rehoboth Park and Ride lot.
+              </p>
+            </li>
+            <li>
+              <p>
+              If you cannot be at the repair garage when mechanics are working, you can lock your bike to the rack outside the DelDOT Bicycle Garage and send an email to bicycles4students@gmail.com   Give us the combination to your lock, a description of the bike, and tell us what's wrong with it.
+              </p>
+            </li>
+            <li>
+              <p>
+              All bikes left must have a combination lock (not a key). We will email you when your bike is fixed and ready to be picked up.
+              </p>
+            </li>
+          </ul>
+          <strong>LOCKS:</strong>
           <p>
-          <strong>FINDING A BIKE:</strong> Check with your employer and landlord first. If they do not have a bike for you, the Delaware Department of Transportation (DelDOT) has 150 free bikes with proper lighting to loan students. Sign up to request a bicycle by filling out the <a href="#request">Registration/Bike Request Form</a> below the video. You will be required to attend one safety information session in order to receive a bicycle. We will schedule you for a safety session and a bike when you fill out the form. Please understand that we will have more students than bikes. If DelDOT is not able to provide you with a bike, we recommend shopping for one at K-Mart, WalMart, or contacting the local thrift shops to see if they have any bikes for sale.
+          Every year dozens of bikes are stolen. You will need to buy a good combination lock (not a lock with a key) and keep your bike locked at all times.  If you are getting a  free bike loaned to you by DelDOT, you must bring a bicycle combination lock with you to the safety session or purchase one from us at the session.
           </p>
+          <strong>SAFETY:</strong>
           <p>
-          <strong>REPAIRS:</strong> Bicycle mechanics are usually available at the church dinners to repair all student bikes, or you can arrange for a repair by filling out the <a href="#bikes">Bike Repair Request form</a>.
+          Helmets are highly recommended and will be given to everyone who gets a bike from DelDOT. If you need a helmet, you can get a free one at the DelDOT Bicycle Garage during repair hours or at the student dinners on June 12, 14, 20, 26 and July 2, 11.
+We cannot over emphasize the need to wear a helmet. Coastal Highway has a lot of traffic and a lot of drivers who are on vacation and not familiar with the area. Serious accidents happen every summer and a helmet could save your life.
           </p>
+          <strong>BICYCLE LAWS:</strong>
           <p>
-            <strong>LOCKS:</strong>  In order to get a free bike loaned to you, you must bring a bicycle lock with you to the safety session. Locks can be purchased at K-Mart or WalMart. DelDOT will try to have some locks for sale at the safety session, but purchasing one on your own is best. You must keep your bike locked at all times. Every year bikes are stolen. Don't lose yours!
-          </p>
-          <p>
-          <strong>SAFETY:</strong>  Helmets are highly recommended and will be given to everyone who gets a bike from DelDOT. If you need a helmet, please email <a href="mailto:bicycles4students@gmail.com">bicycles4students@gmail.com</a> and we will get one for you. We cannot over emphasize the need to wear a helmet. Coastal Highway has a lot of traffic and a lot of drivers who are on vacation and not familiar with the area. Serious accidents happen every summer and a helmet could save your life.
-          </p>
-          <p>
-            <strong>BICYCLE LAWS:</strong> A bicycle is a vehicle and bicyclists must obey the same laws as drivers of other vehicles. Delaware State law requires the following of all bicyclists:  Bicyclists must obey all traffic laws including stopping at red lights and stop signs, as well as yielding at yield signs and to pedestrians; A bicycle must have a headlight in front and rear red reflector or rear light if ridden in low light conditions. DelDOT bikes come with lights, and free lights will be given out at some church dinners. If you are stopped for riding a bike at night without lights, you will have to pay a fine. If you are riding on the street, you must ride on the right side of the street, in the same direction as traffic, not facing traffic. Bicycles are encouraged to ride on the sidewalks on either side of Coastal Highway, but bikes are not allowed on the sidewalks in the town of Rehoboth.
+          A bicycle is a vehicle and bicyclists must obey the same laws as drivers of other vehicles. Delaware State law requires the following of all bicyclists:  Bicyclists must obey all traffic laws including stopping at red lights and stop signs, as well as yielding at yield signs and to pedestrians; A bicycle must have a headlight in front and rear red reflector or rear light if ridden in low light conditions. DelDOT bikes come with lights, and free lights will be given out at the DelDOT Bicycle Garage during repair hours or at the student dinners on June 12, 14, 20, 26 and July 2, 11. If you are stopped for riding a bike at night without lights, you will have to pay a fine. If you are riding on the street, you must ride on the right side of the street, in the same direction as traffic, not facing traffic. Bicycles are encouraged to ride on the sidewalks on either side of Coastal Highway in the same direction as traffic, but bikes are not allowed on the sidewalks in the town of Rehoboth.
           </p>
           <div class='youtube-wrapper'>
             <iframe class='youtube' src="https://www.youtube.com/embed/QUqn4e255No"></iframe>
           </div>
         </div>
-        <div class="col-xs-12 col-md-6">
-          <div role="tabpanel">
-            <%# <ul class="nav nav-tabs" id="bike-forms" role="tablist"> %>
-              <%# <li role="presentation" class="col-xs-6 active"><a href="#request" aria-controls="request" role="tab" data-toggle="tab"><h2>Bike Wait List</h2></a></li> %>
-              <%# <li role="presentation" class="col-xs-6 active"><a href="#repair" aria-controls="repair" role="tab" data-toggle="tab"><h2>Repairs</h2></a></li> %>
-            <%# </ul> %>
-            <div class="tab-content">
+        <%# <div class="col-xs-12 col-md-6"> %>
+          <%# <div role="tabpanel"> %>
+            <%# [> <ul class="nav nav-tabs" id="bike-forms" role="tablist"> <] %>
+              <%# [> <li role="presentation" class="col-xs-6 active"><a href="#request" aria-controls="request" role="tab" data-toggle="tab"><h2>Bike Wait List</h2></a></li> <] %>
+              <%# [> <li role="presentation" class="col-xs-6 active"><a href="#repair" aria-controls="repair" role="tab" data-toggle="tab"><h2>Repairs</h2></a></li> <] %>
+            <%# [> </ul> <] %>
+            <%# <div class="tab-content"> %>
 
-              <div role="tabpanel" class="tab-pane active" id="repair">
-                <h3>Please Fill Out This Repair Request Form</h3>
-                </br>
-                <form class="form-horizontal" id="repair-form" action="/repair_request" method="post">
-                  <div class="form-group">
-                    <label for="name" class="col-sm-3 control-label">Name</label>
-                    <div class="col-sm-9">
-                      <input type="text" class="form-control" name="name" placeholder="John" tabIndex="1">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="email" class="col-sm-3 control-label">Email</label>
-                    <div class="col-sm-9">
-                      <input type="email" class="form-control" name="email" placeholder="john.smith@gmail.com" tabIndex="2">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="phone" class="col-sm-3 control-label">Phone</label>
-                    <div class="col-sm-9">
-                      <input type="text" class="form-control" name="phone" placeholder="303-333-8747" tabIndex="3">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="bike_location" class="col-sm-3 control-label">Bike Location</label>
-                    <div class="col-sm-9">
-                      <input type="text" class="form-control" name="bike_location" placeholder="123 Rehoboth Ave" tabIndex="4" required>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="bike_number" class="col-sm-3 control-label">DelDOT Number</label>
-                    <div class="col-sm-9">
-                      <input type="text" class="form-control" name="bike_number" placeholder="DelDOT Sticker Number" tabIndex="4">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="lock_combo" class="col-sm-3 control-label">Lock Combo</label>
-                    <div class="col-sm-9">
-                      <input type="text" class="form-control" name="lock_combo" placeholder="1-0-4-0" tabIndex="4">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="problem" class="col-sm-3 control-label">Problem</label>
-                    <div class="col-sm-9">
-                      <input type="text" class="form-control" name="problem" placeholder="Back tire is flat." tabIndex="5">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-default" tabIndex="9">Submit</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+              <%# <div role="tabpanel" class="tab-pane active" id="repair"> %>
+                <%# <h3>Please Fill Out This Repair Request Form</h3> %>
+                <%# </br> %>
+                <%# <form class="form-horizontal" id="repair-form" action="/repair_request" method="post"> %>
+                  <%# <div class="form-group"> %>
+                    <%# <label for="name" class="col-sm-3 control-label">Name</label> %>
+                    <%# <div class="col-sm-9"> %>
+                      <%# <input type="text" class="form-control" name="name" placeholder="John" tabIndex="1"> %>
+                    <%# </div> %>
+                  <%# </div> %>
+                  <%# <div class="form-group"> %>
+                    <%# <label for="email" class="col-sm-3 control-label">Email</label> %>
+                    <%# <div class="col-sm-9"> %>
+                      <%# <input type="email" class="form-control" name="email" placeholder="john.smith@gmail.com" tabIndex="2"> %>
+                    <%# </div> %>
+                  <%# </div> %>
+                  <%# <div class="form-group"> %>
+                    <%# <label for="phone" class="col-sm-3 control-label">Phone</label> %>
+                    <%# <div class="col-sm-9"> %>
+                      <%# <input type="text" class="form-control" name="phone" placeholder="303-333-8747" tabIndex="3"> %>
+                    <%# </div> %>
+                  <%# </div> %>
+                  <%# <div class="form-group"> %>
+                    <%# <label for="bike_location" class="col-sm-3 control-label">Bike Location</label> %>
+                    <%# <div class="col-sm-9"> %>
+                      <%# <input type="text" class="form-control" name="bike_location" placeholder="123 Rehoboth Ave" tabIndex="4" required> %>
+                    <%# </div> %>
+                  <%# </div> %>
+                  <%# <div class="form-group"> %>
+                    <%# <label for="bike_number" class="col-sm-3 control-label">DelDOT Number</label> %>
+                    <%# <div class="col-sm-9"> %>
+                      <%# <input type="text" class="form-control" name="bike_number" placeholder="DelDOT Sticker Number" tabIndex="4"> %>
+                    <%# </div> %>
+                  <%# </div> %>
+                  <%# <div class="form-group"> %>
+                    <%# <label for="lock_combo" class="col-sm-3 control-label">Lock Combo</label> %>
+                    <%# <div class="col-sm-9"> %>
+                      <%# <input type="text" class="form-control" name="lock_combo" placeholder="1-0-4-0" tabIndex="4"> %>
+                    <%# </div> %>
+                  <%# </div> %>
+                  <%# <div class="form-group"> %>
+                    <%# <label for="problem" class="col-sm-3 control-label">Problem</label> %>
+                    <%# <div class="col-sm-9"> %>
+                      <%# <input type="text" class="form-control" name="problem" placeholder="Back tire is flat." tabIndex="5"> %>
+                    <%# </div> %>
+                  <%# </div> %>
+                  <%# <div class="form-group"> %>
+                    <%# <div class="col-sm-offset-2 col-sm-10"> %>
+                      <%# <button type="submit" class="btn btn-default" tabIndex="9">Submit</button> %>
+                    <%# </div> %>
+                  <%# </div> %>
+                <%# </form> %>
+              <%# </div> %>
+            <%# </div> %>
+          <%# </div> %>
+        <%# </div> %>
       </div>
     </div>
   </section>
