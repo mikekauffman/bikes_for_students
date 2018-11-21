@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
-ruby '2.2.4'
+ruby '2.4.5'
 
-gem 'rails', '~> 4.2.1'
+gem 'rails', '~> 4.2.5'
 
 gem 'active_model_serializers'
 gem 'bcrypt'
