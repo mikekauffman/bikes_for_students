@@ -43,9 +43,24 @@ a {
   padding: 0;
 }
 
+.youtube-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .intro-section {
   .isop_logo {
-    margin: 0 auto;
+    margin: 50px auto 0px auto;
     height: 300px;
   }
 
@@ -95,7 +110,7 @@ a {
   display: inline-block;
   font-weight: bolder;
   font-size: 1.75em;
-  color: #68B3AF;
+  color: #2892F0;
   @media (max-width: 770px) {
     font-size: 1.5em;
   }
