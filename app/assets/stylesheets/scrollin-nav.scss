@@ -138,13 +138,23 @@ h1 {
     }
 }
 
+.events-section {
+    min-height: 50%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+    @media (max-width: 770px) {
+      padding: 75px 0;
+    }
+}
+
 .bike-section {
     min-height: 100%;
     max-height: 100%;
     overflow-y: auto;
     padding-top: 50px;
     text-align: center;
-    background: #fff;
+    background: #eee;
     .info {
       text-align: left;
     }
