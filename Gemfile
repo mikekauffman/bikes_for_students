@@ -5,7 +5,7 @@ gem 'rails', '~> 4.2.5'
 
 gem 'active_model_serializers'
 gem 'bcrypt'
-gem 'pg'
+gem 'pg', '~> 0.20'
 platforms :ruby do # linux
   gem 'unicorn'
 end
