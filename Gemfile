@@ -10,7 +10,7 @@ platforms :ruby do # linux
   gem 'unicorn'
 end
 gem 'tilt'
-gem "jquery-rails", "~> 2.3.0"
+gem "jquery-rails", "~> 3.1.3"
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'sass-rails', '>= 3.2'
 gem 'uglifier'
